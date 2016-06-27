@@ -1,0 +1,113 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>TI - HomePage</title>
+<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet prefetch" href="/css/magnific-popup.css">
+<link rel="stylesheet" href="css/filebrowser-style.css">
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/js/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript" src="data/elements.js"></script>
+<script type="text/javascript" src="js/filebrowser.js"></script>
+<script type="text/javascript" src="js/utils.js"></script>
+
+</head>
+
+<script>
+window.addEventListener('keydown', function (e) { if (e.which == 116) e.preventDefault() });
+</script>
+
+<body>
+<!-- wrapper -->
+<div class="wrapper">
+	<!-- left Content -->
+    <div id="leftContent" class="leftContent leftSideLogo">
+    	<div class="lMainTitle"></div>
+        <!--div class="filterTree"><span></span><input type="text" placeholder="Filter Tree Nodes"></div-->
+       	<!-- tree -->
+        <ul class="fa-ul leftContentTree">
+        </ul>
+        <!--end tree -->
+        
+    </div>
+    <!-- end left Content -->
+    <!-- main Content -->
+    <div id="mainContent">
+         <h1 class="mainTitle"></h1>
+         <div class="mbot50"></div>
+		 <div id="mainContentData"></div>
+         <div class="mcFooter">
+             <div class="verNum">Version: 1.0.0.16</div>
+             <div class="copyRights">All rights reserved to Texas Instruments inc (c) - For more information go to our <a href="">Help Pages</a></div>
+         </div>
+    </div>
+    <!-- end main Content -->
+    <!-- right content -->
+    <div id="rightContent">
+    	<div class="rTopMenu btnDisabled">
+        	<div class="tMItem tMItem1 btnDisabled"><i class="fa fa-cloud"></i><span>Service Pack</span></div>
+            <div class="tMItem tMItem2 btnDisabled"><i class="fa fa-certificate"></i><span>Certificate</span></div>
+            <div class="tMItem tMItem3 btnDisabled"><i class="fa fa-question-circle"></i><span>Help</span></div>
+        </div>
+        <div class="clear"></div>
+    	<div class="dStatusBox">
+			<div class="wTitle">
+         		<div class="dTitle">Device status</div><div class="dBtn"><i class="fa fa-caret-down fa-2x"></i><i class="fa fa-caret-up fa-2x"></i></div><div class="clear"></div>
+            </div>
+			<div class="cSbox" id="deviceStatusBox">
+            <div class="uStatus"><div class="uText jslink"><div class="uIcon"><i class="fa fa-unlink uRed" ></i></div>Connected: Off</div></div>
+			</div>
+
+        </div>
+        
+        <div class="dStatusBox SelectionsSummary">
+        	<div class="wTitle">
+         		<div class="dTitle">Selections Summary</div><div class="dBtn"><i class="fa fa-caret-down fa-2x"></i><i class="fa fa-caret-up fa-2x"></i></div><div class="clear"></div>
+            </div>
+            <div class="cSbox SelectionsSummaryIn">
+                <div class="uStatus">
+                	<div>Device Mode: <span>Station</span></div>
+               	</div>
+                <div class="uStatus">
+                	<div>Channel: <span>1</span></div>
+               	</div>
+                <div class="uStatus">
+                	<div>Device Mode: <span>Station</span></div>
+               	</div>
+                <div class="uStatus">
+                	<div>Channel: <span>1</span></div>
+               	</div>
+                <div class="uStatus">
+                	<div>Device Mode: <span>Station</span></div>
+               	</div>
+                <div class="uStatus">
+                	<div>Channel: <span>1</span></div>
+               	</div>
+            </div>
+        </div>
+        <table>
+        
+        
+        <tr><td>
+            <div id = "ConnectBtn" class="regButton tooltip"onclick="connectDeviceAPI();" data-tooltip= "Connect/Disconnect">Connect</div>
+            <div id = "BrowseBtn"  class="regButtonR  tooltip" data-tooltip="User File Browser "><i class="fa  fa-folder-open-o fa-2x"></i></div> 
+        </tr></td>    
+        <tr><td><div class="funcBtn">
+            <div class="regButton tooltip" onclick="saveProjectAPI();" data-tooltip="Save Project"><i class="fa fa-floppy-o fa-2x"></i></div>
+            <div class="regButton tooltip" onclick="loadGenerataImage();" data-tooltip="Generate Image"><i class="fa fa-fire fa-2x"></i></div>
+            <div class="regButton tooltip" onclick="loadWelcome();" data-tooltip="Back to Welcome Page"><i class="fa fa-external-link-square fa-2x"></i></div>
+        </div>
+        </tr></td>
+        </table>
+    </div>
+	<!--end right content -->
+</div>
+<!--end wrapper -->
+<div style="clear:both;"></div>
+<div id="fullOverlay" class="fullOverlay"></div>
+
+</body>
+</html>

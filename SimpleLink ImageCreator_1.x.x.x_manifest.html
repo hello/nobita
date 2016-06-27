@@ -1,0 +1,937 @@
+<!--
+Texas Instruments Manifest Format 2.0
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<!-- @Start Style -->
+<!-- Default style in case someone doesnt have Internet Access -->
+<style type="text/css" id="internalStyle">
+	body, div, p {
+		font-family: Lucida Grande, Verdana, Geneva, Arial, sans-serif;
+		font-size: 13px;
+		line-height: 1.3;
+	}
+	body {
+		margin: 20px;	
+	}
+	h1 {
+		font-size: 150%;
+	}
+	h2 {
+		font-size: 120%;
+	}
+	h3 {
+		font-size: 100%;
+	}
+	img {
+		border: 0px;
+		vertical-align: middle;
+	}
+	table, th, td, tr {
+		border: 1px solid black;	
+		font-family: Lucida Grande, Verdana, Geneva, Arial, sans-serif;
+		font-size: 13px;
+		line-height: 1.3;
+		empty-cells: show;  
+		padding: 5px;
+	}
+	table {
+		border-collapse: collapse; 
+		width: 100%;
+	}
+	tr {
+		page-break-inside: avoid;
+	}
+	#TIlogoLeft {
+		background-color: black; 
+		padding: 0;
+		width: 20%;
+	}
+	#TIlogoRight {
+		background-color: red; 
+		padding: 0;
+	}
+	#ProductName {
+		text-align: center;
+	}
+	#ReleaseDate {
+		text-align: center;
+	}
+	.LogoSection {
+		margin: 0;
+		padding: 0;
+	}
+	.HeaderSection {
+		margin: 25px 0 25px 0;
+		padding: 0;
+	}
+	.LegendSection {
+		margin: 25px 0 25px 0;
+	}
+	.ExportSection {
+		margin: 25px 0 25px 0;
+	}
+	.DisclaimerSection {
+		margin: 25px 0 25px 0;	
+	}
+	.CreditSection {
+		margin: 25px 0 25px 0;	
+	}
+	.LicenseSection {
+		margin: 25px 0 25px 0;	
+	}
+	.ManifestTable {
+		margin: 25px 0 25px 0;	
+	}
+</style> 
+<!-- Override style from TI if they have Internet Access -->
+<link type="text/css" rel="stylesheet" href="timanifeststyle.css">
+<!-- @End Style -->
+<title>Texas Instruments Manifest</title>
+</head>
+
+<body><!-- Logo display, will need to fix up the URLs, this is just for testing.. Image alternate display not wporking well yet -->
+<div class="LogoSection">
+<table>
+  <tbody>
+    <tr>
+      <td id="TIlogoLeft">
+        <a href="http://www.ti.com/">
+          <!-- img src="tilogo.gif" alt="Texas Instruments Incorporated" -->
+		  <img alt="" src="data:image/gif;base64,R0lGODlh3gA2AKIAAAAAAP///7u7u29vbz8/PwYGBujo6BgYGCH5BAAAAAAALAAAAADeADYAAAP/CLrc/jDKSau9OOvNu/9gKI5kaZ5oqq5s675wLM90bd94ru987//AoHBILBqPyKRyyWw6n9CodHorDALYLIHKJVqz2q44eAUHtoDB4DBu48rgLQErcNtnX7NhMDcICIB3gix5ZmtqAAZZew8EAo+QkQIDNVZqiIM1cHGKZ4YPAmaiAWw0c1gFmZqjB3SbZ6kNe6WhsAeOlDV0qjSFAXUAp7lwuREFtVsFgMvLB7fNAM+BCs+lDLd8BNYOuxfV22PL0RiWlwO1u3kDqejAEsjR6GB86FsHoYwA6gxWnVgGEegUuIelWJk6jswAGlXQ36J1xBSoQwfulIEDr/6l+VeK/+AehrAGOHRnAWRBbbWegckXAV6wk4AeRQtDQBEaBYsYlMl2hUCsBt0iKgilT9EfAlfO7SmzdKkrkQUT/fqZSECqLCSlntH375IAA1tqGUilLIBSNVnU+NmJNBRVChlF1QwAdlRWBy5P3QymwCLBYhs73cTHYBq3X33nDQ2wcWuBgef0FRD4GK3jU3VCZZUJAIw1OGg0P+4bFiubOWoOsEP1+KvZn3wurDbZ6lfcuw3yYkFjRSeYzRe7ARAbW0K3PmGIMi0OFDG1Mmha+RnufAHn3xL9ha6uTZ/rXagZ1GKAtTsHeWb+FEQvHILuX4+mLzj2j2r4TrFesTwMbE5Cuv8JzbTSGuRV1xgfUJFC3WbA0JWFalcItpgf8YU2yT/qATaedent5cBb8zk0DzIitgfKbonRFV9Wp2xl3UXq5Ccibp05598BnRigiAIJmrZAexkJQIuBwzX4CB3SQbeYQkPVAUco63DI2HzsAdYAiAvEZdYlaVQ5wXs3+bQAjovEUoBRR9LVAFLaPXCcY/KMqVRasQB5kiJgLcYgTkJiuCWKC2ZpIY/z/LRhYefkBAGW1HTyRy2UjObLHxSAOZ948EUVGCSC3SLZbB7iZKOLc2GRRgMH/VhdHnJwFCgD8iEGx0VKvpqbO+hoaCppEg3UiTES1CTkhNaQ+Qs4LQGql07/lET4mIQ6SvTSVGZ9Bmhz/bkYzK+PFKtpje6wumRm1wrLZzSdQASoZvyswdmSuk7p616HfkjBTxZBQucFgqXCFKdn1NpiUlQJhs8kteBWG0AbATbXS2tBlaeoVkmJRova4KkGPmhMFdiSYmq8cbTRYhrlkiHaNufJ9mIgVqEXnAOJM5JE4sgjudQ8bF82x+cKBP4Iiedecyjgx2/WtMNjjhcL9h+S4xq9RYJgsbeeUbmdrPTSQbPccsyijEXOfI8xyuinVJH1wdkS/MQ2Bc5Iq08DyHYwGglvPyCilbz0fa8GLV7r9+Btb7CJ14Qnzg8HpdKoOOF5Py752JNXvrblNphzEHnmnF/a+ecTbA465qKPXnnppkuOeuqKr8465K+z7nrsfc9Ouyq23z5I7rrfwXvvbhSQAAA7" />
+        </a>
+      </td>
+      <td id="TILogoRight">
+        <!-- img src="titagline.gif" alt="Technology for Innovators(tm)"-->
+		<img alt="" src="data:image/gif;base64,R0lGODlhOgEaALMAAP8AAP////92dv+3t/+Njf/W1v/t7f8hIf/19f+jo//Hx/8/P/9cXP/j4//6+v/+/iH5BAAAAAAALAAAAAA6ARoAAAT/EMhJq7046827/2AojmRpnmiqrmzrvnAsz3Rt33iu73zv/8CgcEgsGo/IpHLJbDqft0NDMCBQodis1jcADBKE7nYcCpjPgU5AQBKkVYOHAeRudqtXsh60/vRHdSoBBCGBNAkLe4o4f2psgG8pjR6GM5OLmDB/DA0GBoQADAgICRIBBQUOYgwGCg2kEgudBgUHAIGcBg0MsZ0NCnMGYgsBtqEGAbCynrW3AQONgcIFBgiErK6wAAfUtLbCscWiowoAyLDczLZu0AIJCAYOoJn0G38ObAwPEvLEts/O1vUhsA8AAjGonEmA9W6hGAVpEjiQoKBAhT8HJSRkVyEQQAAJ//a5YeMPQIFyACqCnJjSIgFCB4oB+HOSokWOAB6wIWCxnk8MfYh5QsYg5sVHfQLVMSqhztJIxWIaC6QzJy8KfZgqrNT0zR+nUNl8fSMvZ6IDwJCJRfoI7IR4Cub9nDsha6RwR02xUZpGq1utUWUq9FKgYV6/abgOHjt45tquEgY0SDDHoJg+fxhXolKNrmfH/EoR5EdAKmjQfB1qvPmGIQIJ3g4gC2egVF7LqxtP8Ng2cViTKFUCIGbNFKEEmB/VbDlYdqLRn+du8oTg6jjbmfe+CbTM2+BcuySgbQVtQoOCt7s3U8wbsqGs3ZppZLnylwFe8Uql825ogANPckUnYDoOCogxQGXADajggjcw4AA8DSSyTQASMmjhhTQscBWGHHbo4YcghijiiCSWaOKJKKao4oostugiFBEAADs=" />
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div><div class="HeaderSection">
+<h1 id="ProductName">
+<!-- @Start Product -->
+SimpleLink ImageCreator Manifest
+<!-- @End Product -->
+</h1>
+
+<h2 id="ReleaseDate">
+<!-- @Start Date -->
+02-02-2016
+<!-- @End Date -->
+</h2>
+
+
+<h2 id="SRASID">
+<!-- @Start Date -->
+Manifest ID - SRAS00002423
+<!-- @End Date -->
+</h2>
+</div><div class="LegendSection">
+<h2>Legend</h2>
+<p>(explanation of the fields in the Manifest Table below)</p>
+<table>
+<tbody>
+<tr>
+<td>
+<b>Software Name </b>
+</td>
+<td>
+The name of the application or file
+</td>
+</tr>
+<tr>
+<td>
+<b>Version</b>
+</td>
+<td>
+Version of the application or file
+</td>
+</tr>
+<tr>
+<td>
+<b>License Type</b>
+</td>
+<td>
+Type of license(s) under which TI will be providing
+software to the licensee (e.g. BSD-3-Clause, GPL-2.0, TI TSPA License, TI
+Commercial License). The license could be under Commercial terms or Open Source. See Open Source Reference License Disclaimer in
+the Disclaimers Section. Whenever possible, TI will use an <a href="http://spdx.org/licenses/"> SPDX Short Identifier </a> for an Open Source
+License. TI Commercial license terms are not usually included in the manifest and are conveyed through a variety 
+of means such as a clickwrap license upon install, 
+a signed license agreement and so forth.
+</td>
+</tr>
+<tr>
+<td>
+<b>Location</b>
+</td>
+<td>
+The directory name and path on the media or a specific file where the Software is located. Typically fully qualified path names 
+are not used and instead the relevant top level directory of the application is given. 
+A notation often used in the manifests is [as installed]/directory/*. Note that the asterisk implies that all
+files under that directory are licensed as the License Type field denotes. Any exceptions to this will 
+generally be denoted as [as installed]/directory/* except as noted below which means as shown in subsequent rows of 
+the manifest.
+</td>
+</tr>
+<tr>
+<td>
+<b>Delivered As</b>
+</td>
+<td>
+This field will either be &#8220;Source&#8221;, &#8220;Binary&#8221; or &#8220;Source
+and Binary&#8221; and is the primary form the content of the Software is delivered
+in. If the Software is delivered in an archive format, this field
+applies to the contents of the archive. If the word Limited is used
+with Source, as in &#8220;Limited Source&#8221; or &#8220;Limited Source and Binary&#8221; then
+only portions of the Source for the application are provided.
+</td>
+</tr>
+<tr>
+<td>
+<b>Modified by TI</b>
+</td>
+<td>
+This field will either be &#8220;Yes&#8221; or &#8220;No&#8221;. A &#8220;Yes&#8221; means
+TI has made changes to the Software. A &#8220;No&#8221; means TI has not made any
+changes. Note: This field is not applicable for Software &#8220;Obtained
+from&#8221; TI.
+</td>
+</tr>
+<tr>
+<td>
+<b>Obtained from</b>
+</td>
+<td>
+This field specifies from where or from whom TI obtained
+the Software. It may be a URL to an Open Source site, a 3<sup>rd</sup>
+party licensor, or TI. See Links Disclaimer in the Disclaimers
+Section.
+</td>
+</tr>
+</tbody>
+</table>
+</div><div class="DisclaimerSection">
+<h2>Disclaimers</h2>
+<h3>Export Control Classification Number (ECCN)</h3>
+<p>Any use of ECCNs listed in the Manifest is at the user&#8217;s risk
+and without recourse to TI. Your
+company, as the exporter of record, is responsible for determining the
+correct classification of any item at
+the time of export. Any export classification by TI of Software is for
+TI&#8217;s internal use only and shall not be construed as a representation
+or warranty
+regarding the proper export classification for such Software or whether
+an export
+license or other documentation is required for exporting such Software</p>
+<h3>Links in the Manifest</h3>
+<p>Any
+links appearing on this Manifest
+(for example in the &#8220;Obtained from&#8221; field) were verified at the time
+the Manifest was created. TI makes no guarantee that any listed links
+will
+remain active in the future.</p>
+<h3>Open Source License References</h3>
+<p>Your company is responsible for confirming the
+applicable license terms for any open source Software
+listed in this Manifest that was not &#8220;Obtained from&#8221; TI. Any open
+source license
+specified in this Manifest for Software that was
+not &#8220;Obtained from&#8221; TI is for TI&#8217;s internal use only and shall not be
+construed as a representation or warranty regarding the proper open
+source license terms
+for such Software.</p>
+</div><div class="ExportSection">
+<h2>Export Information</h2>
+<p>ECCN for Software included in this release:</p>
+Publicly Available - Open Source 5D002 TSU License Exception
+</div><div class="ManifestTable">
+<!-- h2>Manifest Table</h2 -->
+ 
+ <table> 
+ <tbody> 
+ 
+ <h2> 
+  SimpleLink ImageCreator Manifest Table 
+ </h2> 
+ 
+  
+ <p> 
+ 
+ See the Legend above for a description of these columns. 
+ 
+ </p> 
+  
+ <table id="targetpackages" name="targetpackages"> 
+ <thead>  
+ 	<tr> 
+ 		<td><b>Software Name</b></td> 
+ 		<td><b>Version</b></td> 
+ 		<td><b>License Type</b></td> 
+ 		<td><b>Delivered As</b></td> 
+ 		<td><b>Modified by TI</b></td> 
+ 		<td></td> 
+ 		<td></td> 
+ 	</tr> 
+ </thead>  
+ 
+ 
+ <tbody> 
+ 	<tr> 
+ 		<td id="name" name="name" rowspan="2"> 
+ CC31xx CC32xx  Gang Programmer Rom 
+ </td> 
+ 		<td id="version" name="version" rowspan="2"> 
+ 1.x.x.x 
+ </td> 
+ 		<td id="license" name="license" rowspan="2"> 
+ TI Commercial 
+ </td> 
+ 		<td id="delivered" name="delivered" rowspan="2"> 
+ Binary 
+ </td> 
+ 		<td id="modified" name="modified" rowspan="2"> 
+ N/A 
+ </td> 
+ 		<td><b>Location</b></td> 
+ 		<td id="location" name="location"> 
+ [as installed]\ 
+ </td> 
+ 	</tr> 
+ 	<tr> 
+ 		<td><b>Obtained from</b></td> 
+ 		<td id="obtained" name="obtained"> 
+ TI 
+ </td> 
+ 	</tr> 
+ 
+ <tbody> 
+ 	<tr> 
+ 		<td id="name" name="name" rowspan="2"> 
+ Image Creator Server 
+ </td> 
+ 		<td id="version" name="version" rowspan="2"> 
+ 1.x.x.x 
+ </td> 
+ 		<td id="license" name="license" rowspan="2"> 
+ TI Commercial with portions under PSF 2.7 and MIT and  PySerial 
+ </td> 
+ 		<td id="delivered" name="delivered" rowspan="2"> 
+ Binary 
+ </td> 
+ 		<td id="modified" name="modified" rowspan="2"> 
+ N/A 
+ </td> 
+ 		<td><b>Location</b></td> 
+ 		<td id="location" name="location"> 
+ [as installed]\bin\SLImageCreatorServer.exe 
+ </td> 
+ 	</tr> 
+ 	<tr> 
+ 		<td><b>Obtained from</b></td> 
+ 		<td id="obtained" name="obtained"> 
+ TI 
+ </td> 
+ 	</tr> 
+ 
+ <tbody> 
+ 	<tr> 
+ 		<td id="name" name="name" rowspan="2"> 
+ Image Creator Server - Python 
+ </td> 
+ 		<td id="version" name="version" rowspan="2"> 
+ 2.7 
+ </td> 
+ 		<td id="license" name="license" rowspan="2"> 
+ PSF 2.7 
+ </td> 
+ 		<td id="delivered" name="delivered" rowspan="2"> 
+ Binary 
+ </td> 
+ 		<td id="modified" name="modified" rowspan="2"> 
+ No 
+ </td> 
+ 		<td><b>Location</b></td> 
+ 		<td id="location" name="location"> 
+ [as installed]\bin\SLImageCreatorServer.exe 
+ </td> 
+ 	</tr> 
+ 	<tr> 
+ 		<td><b>Obtained from</b></td> 
+ 		<td id="obtained" name="obtained"> 
+ http://www.python.org/download/releases/2.7.3/  
+ </td> 
+ 	</tr> 
+ 
+ <tbody> 
+ 	<tr> 
+ 		<td id="name" name="name" rowspan="2"> 
+ Image Creator Server - py2exe 
+ </td> 
+ 		<td id="version" name="version" rowspan="2"> 
+ 0.6.9 
+ </td> 
+ 		<td id="license" name="license" rowspan="2"> 
+ MIT 
+ </td> 
+ 		<td id="delivered" name="delivered" rowspan="2"> 
+ Binary 
+ </td> 
+ 		<td id="modified" name="modified" rowspan="2"> 
+ No 
+ </td> 
+ 		<td><b>Location</b></td> 
+ 		<td id="location" name="location"> 
+ [as installed]\bin\SLImageCreatorServer.exe 
+ </td> 
+ 	</tr> 
+ 	<tr> 
+ 		<td><b>Obtained from</b></td> 
+ 		<td id="obtained" name="obtained"> 
+ http://sourceforge.net/projects/py2exe/files/py2exe/0.6.9/ 
+ </td> 
+ 	</tr> 
+ 
+ <tbody> 
+ 	<tr> 
+ 		<td id="name" name="name" rowspan="2"> 
+ Image Creator Server - Flask 
+ </td> 
+ 		<td id="version" name="version" rowspan="2"> 
+ 0.10.x 
+ </td> 
+ 		<td id="license" name="license" rowspan="2"> 
+ BSD-3-Clause 
+ </td> 
+ 		<td id="delivered" name="delivered" rowspan="2"> 
+ Binary 
+ </td> 
+ 		<td id="modified" name="modified" rowspan="2"> 
+ No 
+ </td> 
+ 		<td><b>Location</b></td> 
+ 		<td id="location" name="location"> 
+ [as installed]\bin\SLImageCreatorServer.exe 
+ </td> 
+ 	</tr> 
+ 	<tr> 
+ 		<td><b>Obtained from</b></td> 
+ 		<td id="obtained" name="obtained"> 
+ http://flask.pocoo.org/ 
+ </td> 
+ 	</tr> 
+ 
+ <tbody> 
+ 	<tr> 
+ 		<td id="name" name="name" rowspan="2"> 
+ Image Creator Server - PySerial 
+ </td> 
+ 		<td id="version" name="version" rowspan="2"> 
+ 2.7 
+ </td> 
+ 		<td id="license" name="license" rowspan="2"> 
+ PySerial 
+ </td> 
+ 		<td id="delivered" name="delivered" rowspan="2"> 
+ Binary 
+ </td> 
+ 		<td id="modified" name="modified" rowspan="2"> 
+ No 
+ </td> 
+ 		<td><b>Location</b></td> 
+ 		<td id="location" name="location"> 
+ [as installed]\bin\SLImageCreatorServer.exe 
+ </td> 
+ 	</tr> 
+ 	<tr> 
+ 		<td><b>Obtained from</b></td> 
+ 		<td id="obtained" name="obtained"> 
+ http://pyserial.sourceforge.net/  
+ </td> 
+ 	</tr> 
+ 
+ <tbody> 
+ 	<tr> 
+ 		<td id="name" name="name" rowspan="2"> 
+ Image Creator Server - ftd2xx 
+ </td> 
+ 		<td id="version" name="version" rowspan="2"> 
+ 1.0 
+ </td> 
+ 		<td id="license" name="license" rowspan="2"> 
+ BSD 
+ </td> 
+ 		<td id="delivered" name="delivered" rowspan="2"> 
+ Binary 
+ </td> 
+ 		<td id="modified" name="modified" rowspan="2"> 
+ No 
+ </td> 
+ 		<td><b>Location</b></td> 
+ 		<td id="location" name="location"> 
+ [as installed]\bin\SLImageCreatorServer.exe 
+ </td> 
+ 	</tr> 
+ 	<tr> 
+ 		<td><b>Obtained from</b></td> 
+ 		<td id="obtained" name="obtained"> 
+ https://pypi.python.org/pypi/ftd2xx 
+ </td> 
+ 	</tr> 
+ 
+ <tbody> 
+ 	<tr> 
+ 		<td id="name" name="name" rowspan="2"> 
+ Image Creator Server - Bottle Python Web Framework 
+ </td> 
+ 		<td id="version" name="version" rowspan="2"> 
+ 0.13-dev 
+ </td> 
+ 		<td id="license" name="license" rowspan="2"> 
+ MIT 
+ </td> 
+ 		<td id="delivered" name="delivered" rowspan="2"> 
+ Binary 
+ </td> 
+ 		<td id="modified" name="modified" rowspan="2"> 
+ No 
+ </td> 
+ 		<td><b>Location</b></td> 
+ 		<td id="location" name="location"> 
+ [as installed]\bin\SLImageCreatorServer.exe 
+ </td> 
+ 	</tr> 
+ 	<tr> 
+ 		<td><b>Obtained from</b></td> 
+ 		<td id="obtained" name="obtained"> 
+ https://raw.githubusercontent.com/bottlepy/bottle/master/bottle.py 
+ </td> 
+ 	</tr> 
+ 
+ <tbody> 
+ 	<tr> 
+ 		<td id="name" name="name" rowspan="2"> 
+ pyinstaller 
+ </td> 
+ 		<td id="version" name="version" rowspan="2"> 
+ 2.1 
+ </td> 
+ 		<td id="license" name="license" rowspan="2"> 
+ GPL 2.0 – with PyInstaller exception 
+ </td> 
+ 		<td id="delivered" name="delivered" rowspan="2"> 
+ Binary 
+ </td> 
+ 		<td id="modified" name="modified" rowspan="2"> 
+ No 
+ </td> 
+ 		<td><b>Location</b></td> 
+ 		<td id="location" name="location"> 
+ Installer  
+ </td> 
+ 	</tr> 
+ 	<tr> 
+ 		<td><b>Obtained from</b></td> 
+ 		<td id="obtained" name="obtained"> 
+ https://github.com/pyinstaller/pyinstaller/wiki 
+ </td> 
+ 	</tr> 
+ 
+ <tbody> 
+ 	<tr> 
+ 		<td id="name" name="name" rowspan="2"> 
+ msvcr90.dll 
+ </td> 
+ 		<td id="version" name="version" rowspan="2"> 
+ 9.0 
+ </td> 
+ 		<td id="license" name="license" rowspan="2"> 
+ TI Commercial 
+ </td> 
+ 		<td id="delivered" name="delivered" rowspan="2"> 
+ Binary 
+ </td> 
+ 		<td id="modified" name="modified" rowspan="2"> 
+ No 
+ </td> 
+ 		<td><b>Location</b></td> 
+ 		<td id="location" name="location"> 
+ pyinstaller 
+ </td> 
+ 	</tr> 
+ 	<tr> 
+ 		<td><b>Obtained from</b></td> 
+ 		<td id="obtained" name="obtained"> 
+ Microsoft Corporation 
+ </td> 
+ 	</tr> 
+ 
+ <tbody> 
+ 	<tr> 
+ 		<td id="name" name="name" rowspan="2"> 
+ msvcrt.dll 
+ </td> 
+ 		<td id="version" name="version" rowspan="2"> 
+ 7.0 
+ </td> 
+ 		<td id="license" name="license" rowspan="2"> 
+ TI Commercial 
+ </td> 
+ 		<td id="delivered" name="delivered" rowspan="2"> 
+ Binary 
+ </td> 
+ 		<td id="modified" name="modified" rowspan="2"> 
+ No 
+ </td> 
+ 		<td><b>Location</b></td> 
+ 		<td id="location" name="location"> 
+ pyinstaller 
+ </td> 
+ 	</tr> 
+ 	<tr> 
+ 		<td><b>Obtained from</b></td> 
+ 		<td id="obtained" name="obtained"> 
+ Microsoft Corporation 
+ </td> 
+ 	</tr> 
+ 
+ <tbody> 
+ 	<tr> 
+ 		<td id="name" name="name" rowspan="2"> 
+ msvcp90.dll 
+ </td> 
+ 		<td id="version" name="version" rowspan="2"> 
+ 9.0 
+ </td> 
+ 		<td id="license" name="license" rowspan="2"> 
+ TI Commercial 
+ </td> 
+ 		<td id="delivered" name="delivered" rowspan="2"> 
+ Binary 
+ </td> 
+ 		<td id="modified" name="modified" rowspan="2"> 
+ No 
+ </td> 
+ 		<td><b>Location</b></td> 
+ 		<td id="location" name="location"> 
+ pyinstaller 
+ </td> 
+ 	</tr> 
+ 	<tr> 
+ 		<td><b>Obtained from</b></td> 
+ 		<td id="obtained" name="obtained"> 
+ Microsoft Corporation 
+ </td> 
+ 	</tr> 
+ 
+ <tbody> 
+ 	<tr> 
+ 		<td id="name" name="name" rowspan="2"> 
+ msvcm90.dll 
+ </td> 
+ 		<td id="version" name="version" rowspan="2"> 
+ 9.0 
+ </td> 
+ 		<td id="license" name="license" rowspan="2"> 
+ TI Commercial 
+ </td> 
+ 		<td id="delivered" name="delivered" rowspan="2"> 
+ Binary 
+ </td> 
+ 		<td id="modified" name="modified" rowspan="2"> 
+ No 
+ </td> 
+ 		<td><b>Location</b></td> 
+ 		<td id="location" name="location"> 
+ pyinstaller 
+ </td> 
+ 	</tr> 
+ 	<tr> 
+ 		<td><b>Obtained from</b></td> 
+ 		<td id="obtained" name="obtained"> 
+ Microsoft Corporation 
+ </td> 
+ 	</tr> 
+ 
+ <tbody> 
+ 	<tr> 
+ 		<td id="name" name="name" rowspan="2"> 
+ Python-IntelHex 
+ </td> 
+ 		<td id="version" name="version" rowspan="2"> 
+ 1.5 
+ </td> 
+ 		<td id="license" name="license" rowspan="2"> 
+ BSD-3-Clause 
+ </td> 
+ 		<td id="delivered" name="delivered" rowspan="2"> 
+ Binary 
+ </td> 
+ 		<td id="modified" name="modified" rowspan="2"> 
+ No 
+ </td> 
+ 		<td><b>Location</b></td> 
+ 		<td id="location" name="location"> 
+ [as installed]Bin\BuildProgrammingImage.exe  
+ </td> 
+ 	</tr> 
+ 	<tr> 
+ 		<td><b>Obtained from</b></td> 
+ 		<td id="obtained" name="obtained"> 
+ https://launchpad.net/intelhex/+download 
+ </td> 
+ 	</tr> 
+ 
+ <tbody> 
+ 	<tr> 
+ 		<td id="name" name="name" rowspan="2"> 
+ PyXB: Python XML Schema Bindings 
+ </td> 
+ 		<td id="version" name="version" rowspan="2"> 
+ 1.2.3 
+ </td> 
+ 		<td id="license" name="license" rowspan="2"> 
+ Apache-2.0 
+ </td> 
+ 		<td id="delivered" name="delivered" rowspan="2"> 
+ Binary 
+ </td> 
+ 		<td id="modified" name="modified" rowspan="2"> 
+ No 
+ </td> 
+ 		<td><b>Location</b></td> 
+ 		<td id="location" name="location"> 
+ [as installed]Bin\BuildProgrammingImage.exe  
+ </td> 
+ 	</tr> 
+ 	<tr> 
+ 		<td><b>Obtained from</b></td> 
+ 		<td id="obtained" name="obtained"> 
+ http://pyxb.sourceforge.net/ 
+ </td> 
+ 	</tr> 
+ 
+ <tbody> 
+ 	<tr> 
+ 		<td id="name" name="name" rowspan="2"> 
+ Python-pywin32 
+ </td> 
+ 		<td id="version" name="version" rowspan="2"> 
+ Build 219 
+ </td> 
+ 		<td id="license" name="license" rowspan="2"> 
+ BSD-3-Clause and Blackdog and Cisco and Microsoft Commercial 
+ </td> 
+ 		<td id="delivered" name="delivered" rowspan="2"> 
+ Binary 
+ </td> 
+ 		<td id="modified" name="modified" rowspan="2"> 
+ No 
+ </td> 
+ 		<td><b>Location</b></td> 
+ 		<td id="location" name="location"> 
+ [as installed]Bin\BuildProgrammingImage.exe  
+ </td> 
+ 	</tr> 
+ 	<tr> 
+ 		<td><b>Obtained from</b></td> 
+ 		<td id="obtained" name="obtained"> 
+ http://sourceforge.net/projects/pywin32/files/pywin32/Build%20219/ 
+ </td> 
+ 	</tr> 
+ 
+ <tbody> 
+ 	<tr> 
+ 		<td id="name" name="name" rowspan="2"> 
+ pycrypto-2.6 
+ </td> 
+ 		<td id="version" name="version" rowspan="2"> 
+ 2.6 
+ </td> 
+ 		<td id="license" name="license" rowspan="2"> 
+ Public Domain and PSF-2.2 
+ </td> 
+ 		<td id="delivered" name="delivered" rowspan="2"> 
+ Binary 
+ </td> 
+ 		<td id="modified" name="modified" rowspan="2"> 
+ No 
+ </td> 
+ 		<td><b>Location</b></td> 
+ 		<td id="location" name="location"> 
+ [as installed]Bin\BuildProgrammingImage.exe 
+ </td> 
+ 	</tr> 
+ 	<tr> 
+ 		<td><b>Obtained from</b></td> 
+ 		<td id="obtained" name="obtained"> 
+ https://pypi.python.org/pypi/pycrypto/2.6 
+ </td> 
+ 	</tr> 
+ 
+ <tbody> 
+ 	<tr> 
+ 		<td id="name" name="name" rowspan="2"> 
+ jQuery 
+ </td> 
+ 		<td id="version" name="version" rowspan="2"> 
+ 2.1.4 
+ </td> 
+ 		<td id="license" name="license" rowspan="2"> 
+ MIT 
+ </td> 
+ 		<td id="delivered" name="delivered" rowspan="2"> 
+ Code 
+ </td> 
+ 		<td id="modified" name="modified" rowspan="2"> 
+ No 
+ </td> 
+ 		<td><b>Location</b></td> 
+ 		<td id="location" name="location"> 
+ [as installed]web\js\jquery.min.js 
+ </td> 
+ 	</tr> 
+ 	<tr> 
+ 		<td><b>Obtained from</b></td> 
+ 		<td id="obtained" name="obtained"> 
+ https://jquery.org/license/ 
+ </td> 
+ 	</tr> 
+ 
+ <tbody> 
+ 	<tr> 
+ 		<td id="name" name="name" rowspan="2"> 
+ Magnific Popup 
+ </td> 
+ 		<td id="version" name="version" rowspan="2"> 
+ 0.9.9 
+ </td> 
+ 		<td id="license" name="license" rowspan="2"> 
+ MIT 
+ </td> 
+ 		<td id="delivered" name="delivered" rowspan="2"> 
+ Code 
+ </td> 
+ 		<td id="modified" name="modified" rowspan="2"> 
+ No 
+ </td> 
+ 		<td><b>Location</b></td> 
+ 		<td id="location" name="location"> 
+ [as installed]web\js\jquery.magnific-popup.min.js 
+ </td> 
+ 	</tr> 
+ 	<tr> 
+ 		<td><b>Obtained from</b></td> 
+ 		<td id="obtained" name="obtained"> 
+ http://dimsemenov.com/plugins/magnific-popup/ 
+ </td> 
+ 	</tr> 
+ 
+ <tbody> 
+ 	<tr> 
+ 		<td id="name" name="name" rowspan="2"> 
+ Font Awesome Code 
+ </td> 
+ 		<td id="version" name="version" rowspan="2"> 
+ 4.3.0 
+ </td> 
+ 		<td id="license" name="license" rowspan="2"> 
+ MIT 
+ </td> 
+ 		<td id="delivered" name="delivered" rowspan="2"> 
+ Code 
+ </td> 
+ 		<td id="modified" name="modified" rowspan="2"> 
+ No 
+ </td> 
+ 		<td><b>Location</b></td> 
+ 		<td id="location" name="location"> 
+ [as installed]web\css\font-awesome.*.css 
+ </td> 
+ 	</tr> 
+ 	<tr> 
+ 		<td><b>Obtained from</b></td> 
+ 		<td id="obtained" name="obtained"> 
+ http://fontawesome.io/license/ 
+ </td> 
+ 	</tr> 
+ 
+ <tbody> 
+ 	<tr> 
+ 		<td id="name" name="name" rowspan="2"> 
+ Font Awesome Fonts 
+ </td> 
+ 		<td id="version" name="version" rowspan="2"> 
+ 4.3.0 
+ </td> 
+ 		<td id="license" name="license" rowspan="2"> 
+ OFL-1.1 
+ </td> 
+ 		<td id="delivered" name="delivered" rowspan="2"> 
+ Code 
+ </td> 
+ 		<td id="modified" name="modified" rowspan="2"> 
+ No 
+ </td> 
+ 		<td><b>Location</b></td> 
+ 		<td id="location" name="location"> 
+ [as installed]web\fonts\* 
+ </td> 
+ 	</tr> 
+ 	<tr> 
+ 		<td><b>Obtained from</b></td> 
+ 		<td id="obtained" name="obtained"> 
+ http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL 
+ </td> 
+ 	</tr> 
+ 
+ <tbody> 
+ 	<tr> 
+ 		<td id="name" name="name" rowspan="2"> 
+ CSS Simple Tooltip 
+ </td> 
+ 		<td id="version" name="version" rowspan="2"> 
+ N/A 
+ </td> 
+ 		<td id="license" name="license" rowspan="2"> 
+ Creative Commons Attribution 4.0 International License 
+ </td> 
+ 		<td id="delivered" name="delivered" rowspan="2"> 
+ Code 
+ </td> 
+ 		<td id="modified" name="modified" rowspan="2"> 
+ No 
+ </td> 
+ 		<td><b>Location</b></td> 
+ 		<td id="location" name="location"> 
+ [as installed]web\js\utils.js 
+ </td> 
+ 	</tr> 
+ 	<tr> 
+ 		<td><b>Obtained from</b></td> 
+ 		<td id="obtained" name="obtained"> 
+ http://cbracco.me/a-simple-css-tooltip/ 
+ </td> 
+ 	</tr> 
+ 
+ </tbody> 
+ </table> 
+  
+ </p> 
+ </p> 
+ <p> 
+
+</div><div class="CreditSection">
+<h2>Credits</h2>
+<BR> <BR><BR><BR><BR>
+</div><div class="LicenseSection">
+<h2>Licenses</h2>
+<BR><h3><b> SimpleLink ImageCreator Licenses </b></h3><BR> <BR><BR><BR><BR><BR>PSF 2.7 License <BR>------------------------<BR><BR>PSF LICENSE AGREEMENT FOR PYTHON 2.7.3<BR><BR>1. This LICENSE AGREEMENT is between the Python Software Foundation (“PSF”), and the Individual or Organization (“Licensee”) accessing and otherwise using Python 2.7.3 software in source or binary form and its associated documentation.<BR>2. Subject to the terms and conditions of this License Agreement, PSF hereby grants Licensee a nonexclusive, royalty-free, world-wide license to reproduce, analyze, test, perform and/or display publicly, prepare derivative works, distribute, and otherwise use Python 2.7.3 alone or in any derivative version, provided, however, that PSF’s License Agreement and PSF’s notice of copyright, i.e., “Copyright © 2001-2013 Python Software Foundation; All Rights Reserved” are retained in Python 2.7.3 alone or in any derivative version prepared by Licensee.<BR>3. In the event Licensee prepares a derivative work that is based on or incorporates Python 2.7.3 or any part thereof, and wants to make the derivative work available to others as provided herein, then Licensee hereby agrees to include in any such work a brief summary of the changes made to Python 2.7.3.<BR>4. PSF is making Python 2.7.3 available to Licensee on an “AS IS” basis. PSF MAKES NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED. BY WAY OF EXAMPLE, BUT NOT LIMITATION, PSF MAKES NO AND DISCLAIMS ANY REPRESENTATION OR WARRANTY OF MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE OR THAT THE USE OF PYTHON 2.7.3 WILL NOT INFRINGE ANY THIRD PARTY RIGHTS.<BR>5. PSF SHALL NOT BE LIABLE TO LICENSEE OR ANY OTHER USERS OF PYTHON 2.7.3 FOR ANY INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES OR LOSS AS A RESULT OF MODIFYING, DISTRIBUTING, OR OTHERWISE USING PYTHON 2.7.3, OR ANY DERIVATIVE THEREOF, EVEN IF ADVISED OF THE POSSIBILITY THEREOF.<BR>6. This License Agreement will automatically terminate upon a material breach of its terms and conditions.<BR>7. Nothing in this License Agreement shall be deemed to create any relationship of agency, partnership, or joint venture between PSF and Licensee. This License Agreement does not grant permission to use PSF trademarks or trade name in a trademark sense to endorse or promote products or services of Licensee, or any third party.<BR>8. By copying, installing or otherwise using Python 2.7.3, Licensee agrees to be bound by the terms and conditions of this License Agreement.<BR><BR><BR><BR>Brief Summary of usage of Python 2.7.3 in the Image Creator Programmer:<BR>- The program is all TI originated code<BR>- The TI program is calling a pyxb library to convert  the xsd to java classes  (http://pyxb.sourceforge.net/), which is a Free Software License - as described in the manifest)<BR>- The TI program is calling a IntelHex  library to convert  the buffer to intelhex file  (https://pypi.python.org/pypi/IntelHex/1.1), which is a Free Software License - as described in the manifest)<BR>- Then, we compiled the program into a PC Windows executable using p2exe and PyWin32 (http://sourceforge.net/projects/py2exe/?source=navbar, which is MIT license as described in the manifest)<BR>- We deliver a tool named ImageCreator in TI release package, which is the PC/Linux/MAC tool that contain executable files.<BR><BR><BR>Py2exe License<BR>---------------------<BR><BR>Copyright (c) 2000, 2001 Thomas Heller<BR>Copyright (c) 2003 Mark Hammond<BR><BR> Permission is hereby granted, free of charge, to any person obtaining<BR> a copy of this software and associated documentation files (the<BR> "Software"), to deal in the Software without restriction, including<BR> without limitation the rights to use, copy, modify, merge, publish,<BR> distribute, sublicense, and/or sell copies of the Software, and to<BR> permit persons to whom the Software is furnished to do so, subject to<BR> the following conditions:<BR> <BR> The above copyright notice and this permission notice shall be<BR> included in all copies or substantial portions of the Software.<BR> <BR> THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,<BR> EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF<BR> MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND<BR> NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE<BR> LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION<BR> OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION<BR> WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.<BR><BR><BR>.PyCURL License<BR>-------------------------  <BR><BR><BR>Copyright (C) 2001-2008 by Kjetil Jacobsen &ltkjetilja at gmail.com><BR>Copyright (C) 2001-2008 by Markus F.X.J. Oberhumer &ltmarkus at oberhumer.com><BR>Copyright (C) 2013-2015 by Oleg Pudeyev &ltoleg at bsdpower.com><BR><BR>All rights reserved.<BR><BR>Permission to use, copy, modify, and distribute this software for any purpose<BR>with or without fee is hereby granted, provided that the above copyright<BR>notice and this permission notice appear in all copies.<BR><BR>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR<BR>IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,<BR>FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF THIRD PARTY RIGHTS. IN<BR>NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,<BR>DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR<BR>OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE<BR>OR OTHER DEALINGS IN THE SOFTWARE.<BR><BR>Except as contained in this notice, the name of a copyright holder shall not<BR>be used in advertising or otherwise to promote the sale, use or other dealings<BR>in this Software without prior written authorization of the copyright holder.<BR><BR>Flask License<BR>--------------------------------------<BR>Copyright (c) 2013 by Armin Ronacher and contributors. See AUTHORS for more details.<BR><BR>Some rights reserved.<BR><BR>Redistribution and use in source and binary forms of the software as well as documentation, with or without modification, <BR>are permitted provided that the following conditions are met:<BR><BR>    Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.<BR>    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer <BR>    in the documentation and/or other materials provided with the distribution.<BR>    The names of the contributors may not be used to endorse or promote products <BR>    derived from this software without specific prior written permission.<BR><BR>THIS SOFTWARE AND DOCUMENTATION IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” AND ANY EXPRESS OR IMPLIED WARRANTIES, <BR>INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. <BR>IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, <BR>OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; <BR>OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, <BR>OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE AND DOCUMENTATION, <BR>EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.<BR><BR><BR><BR>Python-IntelHex License <BR>---------------------------------  <BR><BR>Copyright (c) 2005-2008, Alexander Belchenko<BR>All rights reserved.<BR><BR>Redistribution and use in source and binary forms,<BR>with or without modification, are permitted provided<BR>that the following conditions are met:<BR><BR>* Redistributions of source code must retain<BR>  the above copyright notice, this list of conditions<BR>  and the following disclaimer.<BR>* Redistributions in binary form must reproduce<BR>  the above copyright notice, this list of conditions<BR>  and the following disclaimer in the documentation<BR>  and/or other materials provided with the distribution.<BR>* Neither the name of the author nor the names <BR>  of its contributors may be used to endorse<BR>  or promote products derived from this software<BR>  without specific prior written permission.<BR><BR>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS<BR>"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING,<BR>BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY<BR>AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.<BR>IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE<BR>FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY,<BR>OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,<BR>PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,<BR>OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED<BR>AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,<BR>STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)<BR>ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,<BR>EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.<BR><BR><BR><BR>Pyserial  License<BR>-----------------------  <BR><BR>Copyright (C) 2001-2011 Chris Liechti &ltcliechti(at)gmx.net>; All Rights Reserved.<BR><BR>This is the Python license. In short, you can use this product in commercial and non-commercial applications, modify it, redistribute it. A notification to the author when you use and/or modify it is welcome.<BR><BR>TERMS AND CONDITIONS FOR ACCESSING OR OTHERWISE USING THIS SOFTWARE<BR><BR>LICENSE AGREEMENT<BR>1. This LICENSE AGREEMENT is between the copyright holder of this product, and the Individual or Organization (“Licensee”) accessing and otherwise using this product in source or binary form and its associated documentation.<BR>2. Subject to the terms and conditions of this License Agreement, the copyright holder hereby grants Licensee a nonexclusive, royalty-free, world-wide license to reproduce, analyze, test, perform and/or display publicly, prepare derivative works, distribute, and otherwise use this product alone or in any derivative version, provided, however, that copyright holders License Agreement and copyright holders notice of copyright are retained in this product alone or in any derivative version prepared by Licensee.<BR>3. In the event Licensee prepares a derivative work that is based on or incorporates this product or any part thereof, and wants to make the derivative work available to others as provided herein, then Licensee hereby agrees to include in any such work a brief summary of the changes made to this product.<BR>4. The copyright holder is making this product available to Licensee on an “AS IS” basis. THE COPYRIGHT HOLDER MAKES NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED. BY WAY OF EXAMPLE, BUT NOT LIMITATION, THE COPYRIGHT HOLDER MAKES NO AND DISCLAIMS ANY REPRESENTATION OR WARRANTY OF MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE OR THAT THE USE OF THIS PRODUCT WILL NOT INFRINGE ANY THIRD PARTY RIGHTS.<BR>5. THE COPYRIGHT HOLDER SHALL NOT BE LIABLE TO LICENSEE OR ANY OTHER USERS OF THIS PRODUCT FOR ANY INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES OR LOSS AS A RESULT OF MODIFYING, DISTRIBUTING, OR OTHERWISE USING THIS PRODUCT, OR ANY DERIVATIVE THEREOF, EVEN IF ADVISED OF THE POSSIBILITY THEREOF.<BR>6. This License Agreement will automatically terminate upon a material breach of its terms and conditions.<BR>7. Nothing in this License Agreement shall be deemed to create any relationship of agency, partnership, or joint venture between the copyright holder and Licensee. This License Agreement does not grant permission to use trademarks or trade names from the copyright holder in a trademark sense to endorse or promote products or services of Licensee, or any third party.<BR>8. By copying, installing or otherwise using this product, Licensee agrees to be bound by the terms and conditions of this License Agreement.<BR><BR><BR><BR>Python-pyxb License <BR>----------------------------- <BR><BR>Apache License, Version 2.0<BR><BR><BR>Version 2.0, January 2004<BR><BR>http://www.apache.org/licenses/<BR>TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION<BR>1. Definitions.<BR>"License" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document.<BR>"Licensor" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License.<BR>"Legal Entity" shall mean the union of the acting entity and all other entities that control, are controlled by, or are under common control with that entity. For the purposes of this definition, "control" means (i) the power, direct or indirect, to cause the direction or management of such entity, whether by contract or otherwise, or (ii) ownership of fifty percent (50%) or more of the outstanding shares, or (iii) beneficial ownership of such entity.<BR>"You" (or "Your") shall mean an individual or Legal Entity exercising permissions granted by this License.<BR>"Source" form shall mean the preferred form for making modifications, including but not limited to software source code, documentation source, and configuration files.<BR>"Object" form shall mean any form resulting from mechanical transformation or translation of a Source form, including but not limited to compiled object code, generated documentation, and conversions to other media types.<BR>"Work" shall mean the work of authorship, whether in Source or Object form, made available under the License, as indicated by a copyright notice that is included in or attached to the work (an example is provided in the Appendix below).<BR>"Derivative Works" shall mean any work, whether in Source or Object form, that is based on (or derived from) the Work and for which the editorial revisions, annotations, elaborations, or other modifications represent, as a whole, an original work of authorship. For the purposes of this License, Derivative Works shall not include works that remain separable from, or merely link (or bind by name) to the interfaces of, the Work and Derivative Works thereof.<BR>"Contribution" shall mean any work of authorship, including the original version of the Work and any modifications or additions to that Work or Derivative Works thereof, that is intentionally submitted to Licensor for inclusion in the Work by the copyright owner or by an individual or Legal Entity authorized to submit on behalf of the copyright owner. For the purposes of this definition, "submitted" means any form of electronic, verbal, or written communication sent to the Licensor or its representatives, including but not limited to communication on electronic mailing lists, source code control systems, and issue tracking systems that are managed by, or on behalf of, the Licensor for the purpose of discussing and improving the Work, but excluding communication that is conspicuously marked or otherwise designated in writing by the copyright owner as "Not a Contribution."<BR>"Contributor" shall mean Licensor and any individual or Legal Entity on behalf of whom a Contribution has been received by Licensor and subsequently incorporated within the Work.<BR>2. Grant of Copyright License. Subject to the terms and conditions of this License, each Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare Derivative Works of, publicly display, publicly perform, sublicense, and distribute the Work and such Derivative Works in Source or Object form.<BR>3. Grant of Patent License. Subject to the terms and conditions of this License, each Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable (except as stated in this section) patent license to make, have made, use, offer to sell, sell, import, and otherwise transfer the Work, where such license applies only to those patent claims licensable by such Contributor that are necessarily infringed by their Contribution(s) alone or by combination of their Contribution(s) with the Work to which such Contribution(s) was submitted. If You institute patent litigation against any entity (including a cross-claim or counterclaim in a lawsuit) alleging that the Work or a Contribution incorporated within the Work constitutes direct or contributory patent infringement, then any patent licenses granted to You under this License for that Work shall terminate as of the date such litigation is filed.<BR>4. Redistribution. You may reproduce and distribute copies of the Work or Derivative Works thereof in any medium, with or without modifications, and in Source or Object form, provided that You meet the following conditions:<BR>You must give any other recipients of the Work or Derivative Works a copy of this License; and<BR>You must cause any modified files to carry prominent notices stating that You changed the files; and<BR>You must retain, in the Source form of any Derivative Works that You distribute, all copyright, patent, trademark, and attribution notices from the Source form of the Work, excluding those notices that do not pertain to any part of the Derivative Works; and<BR>If the Work includes a "NOTICE" text file as part of its distribution, then any Derivative Works that You distribute must include a readable copy of the attribution notices contained within such NOTICE file, excluding those notices that do not pertain to any part of the Derivative Works, in at least one of the following places: within a NOTICE text file distributed as part of the Derivative Works; within the Source form or documentation, if provided along with the Derivative Works; or, within a display generated by the Derivative Works, if and wherever such third-party notices normally appear. The contents of the NOTICE file are for informational purposes only and do not modify the License. You may add Your own attribution notices within Derivative Works that You distribute, alongside or as an addendum to the NOTICE text from the Work, provided that such additional attribution notices cannot be construed as modifying the License. <BR><BR>You may add Your own copyright statement to Your modifications and may provide additional or different license terms and conditions for use, reproduction, or distribution of Your modifications, or for any such Derivative Works as a whole, provided Your use, reproduction, and distribution of the Work otherwise complies with the conditions stated in this License.<BR>5. Submission of Contributions. Unless You explicitly state otherwise, any Contribution intentionally submitted for inclusion in the Work by You to the Licensor shall be under the terms and conditions of this License, without any additional terms or conditions. Notwithstanding the above, nothing herein shall supersede or modify the terms of any separate license agreement you may have executed with Licensor regarding such Contributions.<BR>6. Trademarks. This License does not grant permission to use the trade names, trademarks, service marks, or product names of the Licensor, except as required for reasonable and customary use in describing the origin of the Work and reproducing the content of the NOTICE file.<BR>7. Disclaimer of Warranty. Unless required by applicable law or agreed to in writing, Licensor provides the Work (and each Contributor provides its Contributions) on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness of using or redistributing the Work and assume any risks associated with Your exercise of permissions under this License.<BR>8. Limitation of Liability. In no event and under no legal theory, whether in tort (including negligence), contract, or otherwise, unless required by applicable law (such as deliberate and grossly negligent acts) or agreed to in writing, shall any Contributor be liable to You for damages, including any direct, indirect, special, incidental, or consequential damages of any character arising as a result of this License or out of the use or inability to use the Work (including but not limited to damages for loss of goodwill, work stoppage, computer failure or malfunction, or any and all other commercial damages or losses), even if such Contributor has been advised of the possibility of such damages.<BR>9. Accepting Warranty or Additional Liability. While redistributing the Work or Derivative Works thereof, You may choose to offer, and charge a fee for, acceptance of support, warranty, indemnity, or other liability obligations and/or rights consistent with this License. However, in accepting such obligations, You may act only on Your own behalf and on Your sole responsibility, not on behalf of any other Contributor, and only if You agree to indemnify, defend, and hold each Contributor harmless for any liability incurred by, or claims asserted against, such Contributor by reason of your accepting any such warranty or additional liability.<BR>END OF TERMS AND CONDITIONS<BR>APPENDIX: How to apply the Apache License to your work<BR>To apply the Apache License to your work, attach the following boilerplate notice, with the fields enclosed by brackets "[]" replaced with your own identifying information. (Don't include the brackets!) The text should be enclosed in the appropriate comment syntax for the file format. We also recommend that a file or class name and description of purpose be included on the same "printed page" as the copyright notice for easier identification within third-party archives.<BR>Copyright [yyyy] [name of copyright owner]<BR><BR>Licensed under the Apache License, Version 2.0 (the "License");<BR>you may not use this file except in compliance with the License.<BR>You may obtain a copy of the License at<BR><BR>    http://www.apache.org/licenses/LICENSE-2.0<BR><BR>Unless required by applicable law or agreed to in writing, software<BR>distributed under the License is distributed on an "AS IS" BASIS,<BR>WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.<BR>See the License for the specific language governing permissions and<BR>limitations under the License.<BR><BR><BR><BR>Python- pywin32 License  <BR>----------------------------------  <BR><BR><BR>Copyright (c) 1994-2008, Mark Hammond <BR>All rights reserved.<BR><BR>Redistribution and use in source and binary forms, with or without <BR>modification, are permitted provided that the following conditions <BR>are met:<BR><BR>Redistributions of source code must retain the above copyright notice, <BR>this list of conditions and the following disclaimer.<BR><BR>Redistributions in binary form must reproduce the above copyright <BR>notice, this list of conditions and the following disclaimer in <BR>the documentation and/or other materials provided with the distribution.<BR><BR>Neither name of Mark Hammond nor the name of contributors may be used <BR>to endorse or promote products derived from this software without <BR>specific prior written permission. <BR><BR>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS ``AS<BR>IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED<BR>TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A<BR>PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE REGENTS OR<BR>CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,<BR>EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,<BR>PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR<BR>PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF<BR>LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING<BR>NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS<BR>SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.<BR><BR><BR>Copyright 2002-2003 by Blackdog Software Pty Ltd.<BR>All Rights Reserved<BR><BR>Permission to use, copy, modify, and distribute this software and<BR>its documentation for any purpose and without fee is hereby<BR>granted, provided that the above copyright notice appear in all<BR>copies and that both that copyright notice and this permission<BR>notice appear in supporting documentation, and that the name of <BR>Blackdog Software not be used in advertising or publicity pertaining to<BR>distribution of the software without specific, written prior<BR>permission.<BR><BR>BLACKDOG SOFTWARE DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE,<BR>INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS, IN<BR>NO EVENT SHALL BLACKDOG SOFTWARE BE LIABLE FOR ANY SPECIAL, INDIRECT OR<BR>CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS<BR>OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT,<BR>NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN<BR>CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.<BR><BR><BR>This is a part of the Microsoft Foundation Classes C++ library.<BR>Copyright (C) 1992 Microsoft Corporation<BR>All rights reserved.<BR><BR>This source code is only intended as a supplement to the<BR>Microsoft Foundation Classes Reference and Microsoft<BR>QuickHelp and/or WinHelp documentation provided with the library.<BR>See these sources for detailed information regarding the<BR>Microsoft Foundation Classes product.<BR><BR>Copyright 1998-2001 by Neil Hodgson neilh@scintilla.org<BR>States BSD-3-Clause<BR><BR>Copyright (c) 1998-1999 Cisco Systems, Inc. <BR>All Rights Reserved<BR><BR>Permission to use, copy, modify, and distribute this software and its<BR>documentation for any purpose and without fee is hereby granted,<BR>provided that the above copyright notice appear in all copies and that<BR>both that copyright notice and this permission notice appear in<BR>supporting documentation.<BR><BR>CISCO SYSTEMS, INC. DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS<BR>SOFTWARE, INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND<BR>FITNESS. IN NO EVENT SHALL CISCO SYSTEMS BE LIABLE FOR ANY LOST REVENUE, <BR>PROFIT OR DATA, OR FOR SPECIAL, INDIRECT, CONSEQUENTIAL OR INCIDENTAL<BR>DAMAGES OR ANY OTHER DAMAGES WHATSOEVER, HOWEVER CAUSED AND REGARDLESS<BR>OF THE THEORY OF LIABILITY, ARISING OUT OF OR IN CONNECTION<BR>WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.<BR><BR><BR><BR><BR>Python - pycrypto-2.6 License<BR>-----------------------------------------   <BR><BR><BR>Copyright and licensing of the Python Cryptography Toolkit ("PyCrypto"):<BR><BR><BR>Previously, the copyright and/or licensing status of the Python<BR>Cryptography Toolkit ("PyCrypto") had been somewhat ambiguous.  The<BR>original intention of Andrew M. Kuchling and other contributors has<BR>been to dedicate PyCrypto to the public domain, but that intention was<BR>not necessarily made clear in the original disclaimer (see<BR>LEGAL/copy/LICENSE.orig).<BR><BR>Additionally, some files within PyCrypto had specified their own<BR>licenses that differed from the PyCrypto license itself.  For example,<BR>the original RIPEMD.c module simply had a copyright statement and<BR>warranty disclaimer, without clearly specifying any license terms.<BR>(An updated version on the author's website came with a license that<BR>contained a GPL-incompatible advertising clause.)<BR><BR>To rectify this situation for PyCrypto 2.1, the following steps have<BR>been taken:<BR><BR> 1. Obtaining explicit permission from the original contributors to<BR>    dedicate their contributions to the public domain if they have not<BR>    already done so.  (See the "LEGAL/copy/stmts" directory for<BR>    contributors' statements.)<BR><BR> 2. Replacing some modules with clearly-licensed code from other<BR>    sources (e.g. the DES and DES3 modules were replaced with new ones<BR>    based on Tom St. Denis's public-domain LibTomCrypt library.)<BR><BR> 3. Replacing some modules with code written from scratch (e.g. the<BR>    RIPEMD and Blowfish modules were re-implemented from their<BR>    respective algorithm specifications without reference to the old<BR>    implementations).<BR><BR> 4. Removing some modules altogether without replacing them.<BR><BR>To the best of our knowledge, with the exceptions noted below or<BR>within the files themselves, the files that constitute PyCrypto are in<BR>the public domain.  Most are distributed with the following notice:<BR><BR>  The contents of this file are dedicated to the public domain.  To<BR>  the extent that dedication to the public domain is not available,<BR>  everyone is granted a worldwide, perpetual, royalty-free,<BR>  non-exclusive license to exercise all rights associated with the<BR>  contents of this file for any purpose whatsoever.<BR>  No rights are reserved.<BR><BR>  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,<BR>  EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF<BR>  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND<BR>  NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS<BR>  BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN<BR>  ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN<BR>  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE<BR>  SOFTWARE.<BR><BR>Exception:<BR><BR> - Portions of HMAC.py and setup.py are derived from Python 2.2, and<BR>   are therefore Copyright (c) 2001, 2002, 2003 Python Software<BR>   Foundation (All Rights Reserved).  They are licensed by the PSF<BR>   under the terms of the Python 2.2 license.  (See the file<BR>   LEGAL/copy/LICENSE.python-2.2 for details.)<BR><BR><BR><BR><BR>Bottle Python Web Framework License<BR>--------------------------------------------------------   <BR><BR>Copyright (c) 2014, Marcel Hellkamp.<BR><BR>Permission is hereby granted, free of charge, to any person obtaining a copy<BR>of this software and associated documentation files (the "Software"), to deal<BR>in the Software without restriction, including without limitation the rights<BR>to use, copy, modify, merge, publish, distribute, sublicense, and/or sell<BR>copies of the Software, and to permit persons to whom the Software is<BR>furnished to do so, subject to the following conditions:<BR><BR>The above copyright notice and this permission notice shall be included in<BR>all copies or substantial portions of the Software.<BR><BR>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR<BR>IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,<BR>FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE<BR>AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER<BR>LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,<BR>OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN<BR>THE SOFTWARE.<BR><BR><BR>JQuery License<BR>---------------------------------------------------------<BR>Source Code<BR><BR>jQuery Foundation projects are released under the terms of the license specified in the project's repository or if not specified, under the MIT license.<BR><BR>The MIT License is simple and easy to understand and it places almost no restrictions on what you can do with a jQuery Foundation project.<BR><BR>You are free to use any jQuery Foundation project in any other project (even commercial projects) as long as the copyright header is left intact.<BR><BR>Permission is hereby granted, free of charge, to any person obtaining a copy<BR>of this software and associated documentation files (the "Software"), to deal<BR>in the Software without restriction, including without limitation the rights<BR>to use, copy, modify, merge, publish, distribute, sublicense, and/or sell<BR>copies of the Software, and to permit persons to whom the Software is<BR>furnished to do so, subject to the following conditions:<BR><BR>The above copyright notice and this permission notice shall be included in<BR>all copies or substantial portions of the Software.<BR><BR>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR<BR>IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,<BR>FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE<BR>AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER<BR>LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,<BR>OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN<BR>THE SOFTWARE.<BR><BR><BR>Magnific Popup license<BR>---------------------------------------------------------<BR>Copyright (c) 2013 Dmitry Semenov.<BR><BR>Script is available under MIT license and will always be kept this way.<BR><BR>Permission is hereby granted, free of charge, to any person obtaining a copy<BR>of this software and associated documentation files (the "Software"), to deal<BR>in the Software without restriction, including without limitation the rights<BR>to use, copy, modify, merge, publish, distribute, sublicense, and/or sell<BR>copies of the Software, and to permit persons to whom the Software is<BR>furnished to do so, subject to the following conditions:<BR><BR>The above copyright notice and this permission notice shall be included in<BR>all copies or substantial portions of the Software.<BR><BR>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR<BR>IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,<BR>FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE<BR>AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER<BR>LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,<BR>OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN<BR>THE SOFTWARE.<BR><BR><BR>Font Awesome license<BR>---------------------------------------------------------<BR>Font Awesome by Dave Gandy - http://fontawesome.io @davegandy<BR><BR>MIT<BR>Permission is hereby granted, free of charge, to any person obtaining a copy<BR>of this software and associated documentation files (the "Software"), to deal<BR>in the Software without restriction, including without limitation the rights<BR>to use, copy, modify, merge, publish, distribute, sublicense, and/or sell<BR>copies of the Software, and to permit persons to whom the Software is<BR>furnished to do so, subject to the following conditions:<BR><BR>The above copyright notice and this permission notice shall be included in<BR>all copies or substantial portions of the Software.<BR><BR>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR<BR>IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,<BR>FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE<BR>AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER<BR>LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,<BR>OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN<BR>THE SOFTWARE.<BR><BR>SIL OPEN FONT LICENSE<BR>--------------------------------------------------------<BR>Version 1.1 - 26 February 2007<BR>PREAMBLE<BR>The goals of the Open Font License (OFL) are to stimulate worldwide development of collaborative font projects, to support the font creation efforts of academic and linguistic communities, and to provide a free and open framework in which fonts may be shared and improved in partnership with others.<BR>The OFL allows the licensed fonts to be used, studied, modified and redistributed freely as long as they are not sold by themselves. The fonts, including any derivative works, can be bundled, embedded, redistributed and/or sold with any software provided that any reserved names are not used by derivative works. The fonts and derivatives, however, cannot be released under any other type of license. The requirement for fonts to remain under this license does not apply to any document created using the fonts or their derivatives.<BR>DEFINITIONS<BR>"Font Software" refers to the set of files released by the Copyright Holder(s) under this license and clearly marked as such. This may include source files, build scripts and documentation.<BR>"Reserved Font Name" refers to any names specified as such after the copyright statement(s).<BR>"Original Version" refers to the collection of Font Software components as distributed by the Copyright Holder(s).<BR>"Modified Version" refers to any derivative made by adding to, deleting, or substituting — in part or in whole — any of the components of the Original Version, by changing formats or by porting the Font Software to a new environment.<BR>"Author" refers to any designer, engineer, programmer, technical writer or other person who contributed to the Font Software.<BR>PERMISSION & CONDITIONS<BR>Permission is hereby granted, free of charge, to any person obtaining a copy of the Font Software, to use, study, copy, merge, embed, modify, redistribute, and sell modified and unmodified copies of the Font Software, subject to the following conditions:<BR>1) Neither the Font Software nor any of its individual components, in Original or Modified Versions, may be sold by itself.<BR>2) Original or Modified Versions of the Font Software may be bundled, redistributed and/or sold with any software, provided that each copy contains the above copyright notice and this license. These can be included either as stand-alone text files, human-readable headers or in the appropriate machine-readable metadata fields within text or binary files as long as those fields can be easily viewed by the user.<BR>3) No Modified Version of the Font Software may use the Reserved Font Name(s) unless explicit written permission is granted by the corresponding Copyright Holder. This restriction only applies to the primary font name as presented to the users.<BR>4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font Software shall not be used to promote, endorse or advertise any Modified Version, except to acknowledge the contribution(s) of the Copyright Holder(s) and the Author(s) or with their explicit written permission.<BR>5) The Font Software, modified or unmodified, in part or in whole, must be distributed entirely under this license, and must not be distributed under any other license. The requirement for fonts to remain under this license does not apply to any document created using the Font Software.<BR>TERMINATION<BR>This license becomes null and void if any of the above conditions are not met.<BR>DISCLAIMER<BR>THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM OTHER DEALINGS IN THE FONT SOFTWARE.<BR><BR><BR>Creative Commons Attribution 4.0 International Public License<BR><BR>By exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons Attribution 4.0 International Public License ("Public License"). To the extent this Public License may be interpreted as a contract, You are granted the Licensed Rights in consideration of Your acceptance of these terms and conditions, and the Licensor grants You such rights in consideration of benefits the Licensor receives from making the Licensed Material available under these terms and conditions.<BR><BR>Section 1 – Definitions.<BR><BR>Adapted Material means material subject to Copyright and Similar Rights that is derived from or based upon the Licensed Material and in which the Licensed Material is translated, altered, arranged, transformed, or otherwise modified in a manner requiring permission under the Copyright and Similar Rights held by the Licensor. For purposes of this Public License, where the Licensed Material is a musical work, performance, or sound recording, Adapted Material is always produced where the Licensed Material is synched in timed relation with a moving image.<BR>Adapter's License means the license You apply to Your Copyright and Similar Rights in Your contributions to Adapted Material in accordance with the terms and conditions of this Public License.<BR>Copyright and Similar Rights means copyright and/or similar rights closely related to copyright including, without limitation, performance, broadcast, sound recording, and Sui Generis Database Rights, without regard to how the rights are labeled or categorized. For purposes of this Public License, the rights specified in Section 2(b)(1)-(2) are not Copyright and Similar Rights.<BR>Effective Technological Measures means those measures that, in the absence of proper authority, may not be circumvented under laws fulfilling obligations under Article 11 of the WIPO Copyright Treaty adopted on December 20, 1996, and/or similar international agreements.<BR>Exceptions and Limitations means fair use, fair dealing, and/or any other exception or limitation to Copyright and Similar Rights that applies to Your use of the Licensed Material.<BR>Licensed Material means the artistic or literary work, database, or other material to which the Licensor applied this Public License.<BR>Licensed Rights means the rights granted to You subject to the terms and conditions of this Public License, which are limited to all Copyright and Similar Rights that apply to Your use of the Licensed Material and that the Licensor has authority to license.<BR>Licensor means the individual(s) or entity(ies) granting rights under this Public License.<BR>Share means to provide material to the public by any means or process that requires permission under the Licensed Rights, such as reproduction, public display, public performance, distribution, dissemination, communication, or importation, and to make material available to the public including in ways that members of the public may access the material from a place and at a time individually chosen by them.<BR>Sui Generis Database Rights means rights other than copyright resulting from Directive 96/9/EC of the European Parliament and of the Council of 11 March 1996 on the legal protection of databases, as amended and/or succeeded, as well as other essentially equivalent rights anywhere in the world.<BR>You means the individual or entity exercising the Licensed Rights under this Public License. Your has a corresponding meaning.<BR>Section 2 – Scope.<BR><BR>License grant.<BR>Subject to the terms and conditions of this Public License, the Licensor hereby grants You a worldwide, royalty-free, non-sublicensable, non-exclusive, irrevocable license to exercise the Licensed Rights in the Licensed Material to:<BR>reproduce and Share the Licensed Material, in whole or in part; and<BR>produce, reproduce, and Share Adapted Material.<BR>Exceptions and Limitations. For the avoidance of doubt, where Exceptions and Limitations apply to Your use, this Public License does not apply, and You do not need to comply with its terms and conditions.<BR>Term. The term of this Public License is specified in Section 6(a).<BR>Media and formats; technical modifications allowed. The Licensor authorizes You to exercise the Licensed Rights in all media and formats whether now known or hereafter created, and to make technical modifications necessary to do so. The Licensor waives and/or agrees not to assert any right or authority to forbid You from making technical modifications necessary to exercise the Licensed Rights, including technical modifications necessary to circumvent Effective Technological Measures. For purposes of this Public License, simply making modifications authorized by this Section 2(a)(4) never produces Adapted Material.<BR>Downstream recipients.<BR>Offer from the Licensor – Licensed Material. Every recipient of the Licensed Material automatically receives an offer from the Licensor to exercise the Licensed Rights under the terms and conditions of this Public License.<BR>No downstream restrictions. You may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, the Licensed Material if doing so restricts exercise of the Licensed Rights by any recipient of the Licensed Material.<BR>No endorsement. Nothing in this Public License constitutes or may be construed as permission to assert or imply that You are, or that Your use of the Licensed Material is, connected with, or sponsored, endorsed, or granted official status by, the Licensor or others designated to receive attribution as provided in Section 3(a)(1)(A)(i).<BR>Other rights.<BR><BR>Moral rights, such as the right of integrity, are not licensed under this Public License, nor are publicity, privacy, and/or other similar personality rights; however, to the extent possible, the Licensor waives and/or agrees not to assert any such rights held by the Licensor to the limited extent necessary to allow You to exercise the Licensed Rights, but not otherwise.<BR>Patent and trademark rights are not licensed under this Public License.<BR>To the extent possible, the Licensor waives any right to collect royalties from You for the exercise of the Licensed Rights, whether directly or through a collecting society under any voluntary or waivable statutory or compulsory licensing scheme. In all other cases the Licensor expressly reserves any right to collect such royalties.<BR>Section 3 – License Conditions.<BR><BR>Your exercise of the Licensed Rights is expressly made subject to the following conditions.<BR><BR>Attribution.<BR><BR>If You Share the Licensed Material (including in modified form), You must:<BR><BR>retain the following if it is supplied by the Licensor with the Licensed Material:<BR>identification of the creator(s) of the Licensed Material and any others designated to receive attribution, in any reasonable manner requested by the Licensor (including by pseudonym if designated);<BR>a copyright notice;<BR>a notice that refers to this Public License;<BR>a notice that refers to the disclaimer of warranties;<BR>a URI or hyperlink to the Licensed Material to the extent reasonably practicable;<BR>indicate if You modified the Licensed Material and retain an indication of any previous modifications; and<BR>indicate the Licensed Material is licensed under this Public License, and include the text of, or the URI or hyperlink to, this Public License.<BR>You may satisfy the conditions in Section 3(a)(1) in any reasonable manner based on the medium, means, and context in which You Share the Licensed Material. For example, it may be reasonable to satisfy the conditions by providing a URI or hyperlink to a resource that includes the required information.<BR>If requested by the Licensor, You must remove any of the information required by Section 3(a)(1)(A) to the extent reasonably practicable.<BR>If You Share Adapted Material You produce, the Adapter's License You apply must not prevent recipients of the Adapted Material from complying with this Public License.<BR>Section 4 – Sui Generis Database Rights.<BR><BR>Where the Licensed Rights include Sui Generis Database Rights that apply to Your use of the Licensed Material:<BR><BR>for the avoidance of doubt, Section 2(a)(1) grants You the right to extract, reuse, reproduce, and Share all or a substantial portion of the contents of the database;<BR>if You include all or a substantial portion of the database contents in a database in which You have Sui Generis Database Rights, then the database in which You have Sui Generis Database Rights (but not its individual contents) is Adapted Material; and<BR>You must comply with the conditions in Section 3(a) if You Share all or a substantial portion of the contents of the database.<BR>For the avoidance of doubt, this Section 4 supplements and does not replace Your obligations under this Public License where the Licensed Rights include other Copyright and Similar Rights.<BR>Section 5 – Disclaimer of Warranties and Limitation of Liability.<BR><BR>Unless otherwise separately undertaken by the Licensor, to the extent possible, the Licensor offers the Licensed Material as-is and as-available, and makes no representations or warranties of any kind concerning the Licensed Material, whether express, implied, statutory, or other. This includes, without limitation, warranties of title, merchantability, fitness for a particular purpose, non-infringement, absence of latent or other defects, accuracy, or the presence or absence of errors, whether or not known or discoverable. Where disclaimers of warranties are not allowed in full or in part, this disclaimer may not apply to You.<BR>To the extent possible, in no event will the Licensor be liable to You on any legal theory (including, without limitation, negligence) or otherwise for any direct, special, indirect, incidental, consequential, punitive, exemplary, or other losses, costs, expenses, or damages arising out of this Public License or use of the Licensed Material, even if the Licensor has been advised of the possibility of such losses, costs, expenses, or damages. Where a limitation of liability is not allowed in full or in part, this limitation may not apply to You.<BR>The disclaimer of warranties and limitation of liability provided above shall be interpreted in a manner that, to the extent possible, most closely approximates an absolute disclaimer and waiver of all liability.<BR>Section 6 – Term and Termination.<BR><BR>This Public License applies for the term of the Copyright and Similar Rights licensed here. However, if You fail to comply with this Public License, then Your rights under this Public License terminate automatically.<BR>Where Your right to use the Licensed Material has terminated under Section 6(a), it reinstates:<BR><BR>automatically as of the date the violation is cured, provided it is cured within 30 days of Your discovery of the violation; or<BR>upon express reinstatement by the Licensor.<BR>For the avoidance of doubt, this Section 6(b) does not affect any right the Licensor may have to seek remedies for Your violations of this Public License.<BR>For the avoidance of doubt, the Licensor may also offer the Licensed Material under separate terms or conditions or stop distributing the Licensed Material at any time; however, doing so will not terminate this Public License.<BR>Sections 1, 5, 6, 7, and 8 survive termination of this Public License.<BR>Section 7 – Other Terms and Conditions.<BR><BR>The Licensor shall not be bound by any additional or different terms or conditions communicated by You unless expressly agreed.<BR>Any arrangements, understandings, or agreements regarding the Licensed Material not stated herein are separate from and independent of the terms and conditions of this Public License.<BR>Section 8 – Interpretation.<BR><BR>For the avoidance of doubt, this Public License does not, and shall not be interpreted to, reduce, limit, restrict, or impose conditions on any use of the Licensed Material that could lawfully be made without permission under this Public License.<BR>To the extent possible, if any provision of this Public License is deemed unenforceable, it shall be automatically reformed to the minimum extent necessary to make it enforceable. If the provision cannot be reformed, it shall be severed from this Public License without affecting the enforceability of the remaining terms and conditions.<BR>No term or condition of this Public License will be waived and no failure to comply consented to unless expressly agreed to by the Licensor.<BR>Nothing in this Public License constitutes or may be interpreted as a limitation upon, or waiver of, any privileges and immunities that apply to the Licensor or You, including from the legal processes of any jurisdiction or authority.<BR><BR>CSS Simple Tooltip<BR>---------------------------------------------------------<BR>Copyright (c) Chris Bracco<BR><BR>Creative Commons Corporation (“Creative Commons”) is not a law firm and does not provide legal services or legal advice. <BR>Distribution of Creative Commons public licenses does not create a lawyer-client or other relationship. <BR>Creative Commons makes its licenses and related information available on an “as-is” basis. <BR>Creative Commons gives no warranties regarding its licenses, any material licensed under their terms and conditions, <BR>or any related information. <BR>Creative Commons disclaims all liability for damages resulting from their use to the fullest extent possible.<BR><BR>PyInstaller License<BR>--------------------------    <BR><BR>Copyright (c) 2010-2013, PyInstaller Development Team<BR>Copyright (c) 2005-2009, Giovanni Bajo<BR>Based on previous work under copyright (c) 2002 McMillan Enterprises, Inc.<BR><BR><BR>PyInstaller is licensed under the terms of the GNU General Public License<BR>as published by the Free Software Foundation; either version 2 of the License,<BR>or (at your option) any later version.<BR><BR><BR>Bootloader Exception<BR>--------------------<BR><BR>In addition to the permissions in the GNU General Public License, the<BR>authors give you unlimited permission to link or embed compiled bootloader<BR>and related files into combinations with other programs, and to distribute<BR>those combinations without any restriction coming from the use of those<BR>files. (The General Public License restrictions do apply in other respects;<BR>for example, they cover modification of the files, and distribution when<BR>not linked into a combine executable.)<BR> <BR> <BR>Bootloader and Related Files<BR>----------------------------<BR><BR>Bootloader and related files are files which are embedded within the<BR>final executable. This includes files in directories:<BR><BR>./bootloader/<BR>./PyInstaller/loader<BR><BR> <BR>About the PyInstaller Development Team<BR>--------------------------------------<BR><BR>The PyInstaller Development Team is the set of contributors<BR>to the PyInstaller project. A full list with details is kept<BR>in the documentation directory, in the file<BR>``doc/credits.txt``.<BR><BR>The core team that coordinates development on GitHub can be found here:<BR>https://github.com/pyinstaller/pyinstaller.  As of 2013, it consists of:<BR><BR>* Giovanni Bajo<BR>* Hartmut Goebel<BR>* Martin Zibricky<BR><BR><BR>Our Copyright Policy<BR>--------------------<BR><BR>PyInstaller uses a shared copyright model. Each contributor maintains copyright<BR>over their contributions to PyInstaller. But, it is important to note that these<BR>contributions are typically only changes to the repositories. Thus,<BR>the PyInstaller source code, in its entirety is not the copyright of any single<BR>person or institution.  Instead, it is the collective copyright of the entire<BR>PyInstaller Development Team.  If individual contributors want to maintain<BR>a record of what changes/contributions they have specific copyright on, they<BR>should indicate their copyright in the commit message of the change, when they<BR>commit the change to the PyInstaller repository.<BR><BR>With this in mind, the following banner should be used in any source code file<BR>to indicate the copyright and license terms:<BR><BR><BR>#-----------------------------------------------------------------------------<BR># Copyright (c) 2013, PyInstaller Development Team.<BR>#<BR># Distributed under the terms of the GNU General Public License with exception<BR># for distributing bootloader.<BR>#<BR># The full license is in the file COPYING.txt, distributed with this software.<BR>#-----------------------------------------------------------------------------<BR><BR><BR><BR>GNU General Public License<BR>--------------------------<BR><BR>		    GNU GENERAL PUBLIC LICENSE<BR>		       Version 2, June 1991<BR><BR> Copyright (C) 1989, 1991 Free Software Foundation, Inc.<BR>                 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA<BR> Everyone is permitted to copy and distribute verbatim copies<BR> of this license document, but changing it is not allowed.<BR><BR>			    Preamble<BR><BR>  The licenses for most software are designed to take away your<BR>freedom to share and change it.  By contrast, the GNU General Public<BR>License is intended to guarantee your freedom to share and change free<BR>software--to make sure the software is free for all its users.  This<BR>General Public License applies to most of the Free Software<BR>Foundation's software and to any other program whose authors commit to<BR>using it.  (Some other Free Software Foundation software is covered by<BR>the GNU Library General Public License instead.)  You can apply it to<BR>your programs, too.<BR><BR>  When we speak of free software, we are referring to freedom, not<BR>price.  Our General Public Licenses are designed to make sure that you<BR>have the freedom to distribute copies of free software (and charge for<BR>this service if you wish), that you receive source code or can get it<BR>if you want it, that you can change the software or use pieces of it<BR>in new free programs; and that you know you can do these things.<BR><BR>  To protect your rights, we need to make restrictions that forbid<BR>anyone to deny you these rights or to ask you to surrender the rights.<BR>These restrictions translate to certain responsibilities for you if you<BR>distribute copies of the software, or if you modify it.<BR><BR>  For example, if you distribute copies of such a program, whether<BR>gratis or for a fee, you must give the recipients all the rights that<BR>you have.  You must make sure that they, too, receive or can get the<BR>source code.  And you must show them these terms so they know their<BR>rights.<BR><BR>  We protect your rights with two steps: (1) copyright the software, and<BR>(2) offer you this license which gives you legal permission to copy,<BR>distribute and/or modify the software.<BR><BR>  Also, for each author's protection and ours, we want to make certain<BR>that everyone understands that there is no warranty for this free<BR>software.  If the software is modified by someone else and passed on, we<BR>want its recipients to know that what they have is not the original, so<BR>that any problems introduced by others will not reflect on the original<BR>authors' reputations.<BR><BR>  Finally, any free program is threatened constantly by software<BR>patents.  We wish to avoid the danger that redistributors of a free<BR>program will individually obtain patent licenses, in effect making the<BR>program proprietary.  To prevent this, we have made it clear that any<BR>patent must be licensed for everyone's free use or not licensed at all.<BR><BR>  The precise terms and conditions for copying, distribution and<BR>modification follow.<BR><BR>		    GNU GENERAL PUBLIC LICENSE<BR>   TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION<BR><BR>  0. This License applies to any program or other work which contains<BR>a notice placed by the copyright holder saying it may be distributed<BR>under the terms of this General Public License.  The "Program", below,<BR>refers to any such program or work, and a "work based on the Program"<BR>means either the Program or any derivative work under copyright law:<BR>that is to say, a work containing the Program or a portion of it,<BR>either verbatim or with modifications and/or translated into another<BR>language.  (Hereinafter, translation is included without limitation in<BR>the term "modification".)  Each licensee is addressed as "you".<BR><BR>Activities other than copying, distribution and modification are not<BR>covered by this License; they are outside its scope.  The act of<BR>running the Program is not restricted, and the output from the Program<BR>is covered only if its contents constitute a work based on the<BR>Program (independent of having been made by running the Program).<BR>Whether that is true depends on what the Program does.<BR><BR>  1. You may copy and distribute verbatim copies of the Program's<BR>source code as you receive it, in any medium, provided that you<BR>conspicuously and appropriately publish on each copy an appropriate<BR>copyright notice and disclaimer of warranty; keep intact all the<BR>notices that refer to this License and to the absence of any warranty;<BR>and give any other recipients of the Program a copy of this License<BR>along with the Program.<BR><BR>You may charge a fee for the physical act of transferring a copy, and<BR>you may at your option offer warranty protection in exchange for a fee.<BR><BR>  2. You may modify your copy or copies of the Program or any portion<BR>of it, thus forming a work based on the Program, and copy and<BR>distribute such modifications or work under the terms of Section 1<BR>above, provided that you also meet all of these conditions:<BR><BR>    a) You must cause the modified files to carry prominent notices<BR>    stating that you changed the files and the date of any change.<BR><BR>    b) You must cause any work that you distribute or publish, that in<BR>    whole or in part contains or is derived from the Program or any<BR>    part thereof, to be licensed as a whole at no charge to all third<BR>    parties under the terms of this License.<BR><BR>    c) If the modified program normally reads commands interactively<BR>    when run, you must cause it, when started running for such<BR>    interactive use in the most ordinary way, to print or display an<BR>    announcement including an appropriate copyright notice and a<BR>    notice that there is no warranty (or else, saying that you provide<BR>    a warranty) and that users may redistribute the program under<BR>    these conditions, and telling the user how to view a copy of this<BR>    License.  (Exception: if the Program itself is interactive but<BR>    does not normally print such an announcement, your work based on<BR>    the Program is not required to print an announcement.)<BR><BR>These requirements apply to the modified work as a whole.  If<BR>identifiable sections of that work are not derived from the Program,<BR>and can be reasonably considered independent and separate works in<BR>themselves, then this License, and its terms, do not apply to those<BR>sections when you distribute them as separate works.  But when you<BR>distribute the same sections as part of a whole which is a work based<BR>on the Program, the distribution of the whole must be on the terms of<BR>this License, whose permissions for other licensees extend to the<BR>entire whole, and thus to each and every part regardless of who wrote it.<BR><BR>Thus, it is not the intent of this section to claim rights or contest<BR>your rights to work written entirely by you; rather, the intent is to<BR>exercise the right to control the distribution of derivative or<BR>collective works based on the Program.<BR><BR>In addition, mere aggregation of another work not based on the Program<BR>with the Program (or with a work based on the Program) on a volume of<BR>a storage or distribution medium does not bring the other work under<BR>the scope of this License.<BR><BR>  3. You may copy and distribute the Program (or a work based on it,<BR>under Section 2) in object code or executable form under the terms of<BR>Sections 1 and 2 above provided that you also do one of the following:<BR><BR>    a) Accompany it with the complete corresponding machine-readable<BR>    source code, which must be distributed under the terms of Sections<BR>    1 and 2 above on a medium customarily used for software interchange; or,<BR><BR>    b) Accompany it with a written offer, valid for at least three<BR>    years, to give any third party, for a charge no more than your<BR>    cost of physically performing source distribution, a complete<BR>    machine-readable copy of the corresponding source code, to be<BR>    distributed under the terms of Sections 1 and 2 above on a medium<BR>    customarily used for software interchange; or,<BR><BR>    c) Accompany it with the information you received as to the offer<BR>    to distribute corresponding source code.  (This alternative is<BR>    allowed only for noncommercial distribution and only if you<BR>    received the program in object code or executable form with such<BR>    an offer, in accord with Subsection b above.)<BR><BR>The source code for a work means the preferred form of the work for<BR>making modifications to it.  For an executable work, complete source<BR>code means all the source code for all modules it contains, plus any<BR>associated interface definition files, plus the scripts used to<BR>control compilation and installation of the executable.  However, as a<BR>special exception, the source code distributed need not include<BR>anything that is normally distributed (in either source or binary<BR>form) with the major components (compiler, kernel, and so on) of the<BR>operating system on which the executable runs, unless that component<BR>itself accompanies the executable.<BR><BR>If distribution of executable or object code is made by offering<BR>access to copy from a designated place, then offering equivalent<BR>access to copy the source code from the same place counts as<BR>distribution of the source code, even though third parties are not<BR>compelled to copy the source along with the object code.<BR><BR>  4. You may not copy, modify, sublicense, or distribute the Program<BR>except as expressly provided under this License.  Any attempt<BR>otherwise to copy, modify, sublicense or distribute the Program is<BR>void, and will automatically terminate your rights under this License.<BR>However, parties who have received copies, or rights, from you under<BR>this License will not have their licenses terminated so long as such<BR>parties remain in full compliance.<BR><BR>  5. You are not required to accept this License, since you have not<BR>signed it.  However, nothing else grants you permission to modify or<BR>distribute the Program or its derivative works.  These actions are<BR>prohibited by law if you do not accept this License.  Therefore, by<BR>modifying or distributing the Program (or any work based on the<BR>Program), you indicate your acceptance of this License to do so, and<BR>all its terms and conditions for copying, distributing or modifying<BR>the Program or works based on it.<BR><BR>  6. Each time you redistribute the Program (or any work based on the<BR>Program), the recipient automatically receives a license from the<BR>original licensor to copy, distribute or modify the Program subject to<BR>these terms and conditions.  You may not impose any further<BR>restrictions on the recipients' exercise of the rights granted herein.<BR>You are not responsible for enforcing compliance by third parties to<BR>this License.<BR><BR>  7. If, as a consequence of a court judgment or allegation of patent<BR>infringement or for any other reason (not limited to patent issues),<BR>conditions are imposed on you (whether by court order, agreement or<BR>otherwise) that contradict the conditions of this License, they do not<BR>excuse you from the conditions of this License.  If you cannot<BR>distribute so as to satisfy simultaneously your obligations under this<BR>License and any other pertinent obligations, then as a consequence you<BR>may not distribute the Program at all.  For example, if a patent<BR>license would not permit royalty-free redistribution of the Program by<BR>all those who receive copies directly or indirectly through you, then<BR>the only way you could satisfy both it and this License would be to<BR>refrain entirely from distribution of the Program.<BR><BR>If any portion of this section is held invalid or unenforceable under<BR>any particular circumstance, the balance of the section is intended to<BR>apply and the section as a whole is intended to apply in other<BR>circumstances.<BR><BR>It is not the purpose of this section to induce you to infringe any<BR>patents or other property right claims or to contest validity of any<BR>such claims; this section has the sole purpose of protecting the<BR>integrity of the free software distribution system, which is<BR>implemented by public license practices.  Many people have made<BR>generous contributions to the wide range of software distributed<BR>through that system in reliance on consistent application of that<BR>system; it is up to the author/donor to decide if he or she is willing<BR>to distribute software through any other system and a licensee cannot<BR>impose that choice.<BR><BR>This section is intended to make thoroughly clear what is believed to<BR>be a consequence of the rest of this License.<BR><BR>  8. If the distribution and/or use of the Program is restricted in<BR>certain countries either by patents or by copyrighted interfaces, the<BR>original copyright holder who places the Program under this License<BR>may add an explicit geographical distribution limitation excluding<BR>those countries, so that distribution is permitted only in or among<BR>countries not thus excluded.  In such case, this License incorporates<BR>the limitation as if written in the body of this License.<BR><BR>  9. The Free Software Foundation may publish revised and/or new versions<BR>of the General Public License from time to time.  Such new versions will<BR>be similar in spirit to the present version, but may differ in detail to<BR>address new problems or concerns.<BR><BR>Each version is given a distinguishing version number.  If the Program<BR>specifies a version number of this License which applies to it and "any<BR>later version", you have the option of following the terms and conditions<BR>either of that version or of any later version published by the Free<BR>Software Foundation.  If the Program does not specify a version number of<BR>this License, you may choose any version ever published by the Free Software<BR>Foundation.<BR><BR>  10. If you wish to incorporate parts of the Program into other free<BR>programs whose distribution conditions are different, write to the author<BR>to ask for permission.  For software which is copyrighted by the Free<BR>Software Foundation, write to the Free Software Foundation; we sometimes<BR>make exceptions for this.  Our decision will be guided by the two goals<BR>of preserving the free status of all derivatives of our free software and<BR>of promoting the sharing and reuse of software generally.<BR><BR>			    NO WARRANTY<BR><BR>  11. BECAUSE THE PROGRAM IS LICENSED FREE OF CHARGE, THERE IS NO WARRANTY<BR>FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW.  EXCEPT WHEN<BR>OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES<BR>PROVIDE THE PROGRAM "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED<BR>OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF<BR>MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.  THE ENTIRE RISK AS<BR>TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU.  SHOULD THE<BR>PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING,<BR>REPAIR OR CORRECTION.<BR><BR>  12. IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING<BR>WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MAY MODIFY AND/OR<BR>REDISTRIBUTE THE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES,<BR>INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING<BR>OUT OF THE USE OR INABILITY TO USE THE PROGRAM (INCLUDING BUT NOT LIMITED<BR>TO LOSS OF DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY<BR>YOU OR THIRD PARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER<BR>PROGRAMS), EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE<BR>POSSIBILITY OF SUCH DAMAGES.<BR><BR>		     END OF TERMS AND CONDITIONS<BR><BR>
+</div>
+
+</body></html>

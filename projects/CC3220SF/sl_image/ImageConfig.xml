@@ -1,0 +1,73 @@
+<?xml version="1.0" ?>
+<Root>
+  <ImageBuilderProp IsTheDeviceSecure="true" StorageCapacityBytes="2097152">
+    <DevelopmentImage>
+      <DevMacAddress>08:00:28:5b:58:aa</DevMacAddress>
+    </DevelopmentImage>
+    <RetToFactoryFlagsList>
+      <RetToFactoryFlag>RET_TO_IMAGE_HOST</RetToFactoryFlag>
+      <RetToFactoryFlag>RET_TO_DEFAULT_HOST</RetToFactoryFlag>
+      <RetToFactoryFlag>RET_TO_IMAGE_GPIO</RetToFactoryFlag>
+    </RetToFactoryFlagsList>
+  </ImageBuilderProp>
+  <CommandsSetList>
+    <CommandsSet>
+      <Command>
+        <CommandFormatStorage EraseStorage="false"/>
+      </Command>
+      <Command>
+        <CommandWriteCertificateStore SignatureFileName="C:\TI\SimpleLink Wi-Fi\Tools\ImageCreator\ImageCreator-1.0.0.16\files\certstore.lst.signed.bin">
+          <FileLocation>C:\TI\SimpleLink Wi-Fi\Tools\ImageCreator\ImageCreator-1.0.0.16\files\certstore.lst</FileLocation>
+        </CommandWriteCertificateStore>
+      </Command>
+      <Command>
+        <CommandWriteServicePack ServicePackVersion="UCF_FLASH">
+          <FileLocation>./projects\CC3220SF\sl_sp\SP_3.0.99.4.2.0.0.0.2.2.0.3.bin</FileLocation>
+        </CommandWriteServicePack>
+      </Command>
+      <Command>
+        <CommandWriteSystemFile>
+          <SystemFileId>CONFIG_TYPE_IP_CONFIG</SystemFileId>
+          <FileLocation>./projects\CC3220SF\sl_fs\sys\ipcfg.bin</FileLocation>
+        </CommandWriteSystemFile>
+      </Command>
+      <Command>
+        <CommandWriteSystemFile>
+          <SystemFileId>CONFIG_TYPE_DEVICE_NAME</SystemFileId>
+          <FileLocation>./projects\CC3220SF\sl_fs\sys\device.name.bin</FileLocation>
+        </CommandWriteSystemFile>
+      </Command>
+      <Command>
+        <CommandWriteSystemFile>
+          <SystemFileId>CONFIG_TYPE_AP</SystemFileId>
+          <FileLocation>./projects\CC3220SF\sl_fs\sys\ap.cfg.bin</FileLocation>
+        </CommandWriteSystemFile>
+      </Command>
+      <Command>
+        <CommandWriteSystemFile>
+          <SystemFileId>CONFIG_TYPE_MODE</SystemFileId>
+          <FileLocation>./projects\CC3220SF\sl_fs\sys\mode.cfg.bin</FileLocation>
+        </CommandWriteSystemFile>
+      </Command>
+      <Command>
+        <CommandWriteSystemFile>
+          <SystemFileId>CONFIG_TYPE_STA_CONFIG</SystemFileId>
+          <FileLocation>./projects\CC3220SF\sl_fs\sys\sta.cfg.bin</FileLocation>
+        </CommandWriteSystemFile>
+      </Command>
+      <Command>
+        <CommandWriteSystemFile>
+          <SystemFileId>CONFIG_TYPE_DHCP_SRV</SystemFileId>
+          <FileLocation>./projects\CC3220SF\sl_fs\sys\dhcpsrv.cfg.bin</FileLocation>
+        </CommandWriteSystemFile>
+      </Command>
+      <Command>
+        <CommandWriteFile>
+          <FileSystemName>/tmp/CrashMiniDump.bin</FileSystemName>
+          <MaxFileSize>24576</MaxFileSize>
+          <FileLocation>C:\TI\SimpleLink Wi-Fi\Tools\ImageCreator\ImageCreator-1.0.0.16\files\CrashMiniDump.bin</FileLocation>
+        </CommandWriteFile>
+      </Command>
+    </CommandsSet>
+  </CommandsSetList>
+</Root>
