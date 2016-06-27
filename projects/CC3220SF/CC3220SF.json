@@ -3,7 +3,7 @@
         "Description": "",
         "DeviceType": "CC3220FS",
         "EnableReturnToFactory": "defaults_and_image",
-        "IsTheDeviceSecure": true,
+        "IsTheDeviceSecure": false,
         "KeyFileLocation": "",
         "Mode": "development",
         "Name": "CC3220SF",
