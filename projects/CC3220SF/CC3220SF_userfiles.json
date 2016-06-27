@@ -1,0 +1,42 @@
+{
+    "name": "/",
+    "folders": [
+        {
+            "name": "cert",
+            "folders": [],
+            "files": [
+                {
+                    "name": "digi.cer",
+                    "maxFileSize": "947",
+                    "flagFailSafe": false,
+                    "flagSecure": false,
+                    "flagVendor": false,
+                    "flagStatic": false,
+                    "flagNoSignatureTest": false,
+                    "flagPublicWrite": false,
+                    "flagPublicRead": false,
+                    "fileToken": "",
+                    "certificationFileName": "",
+                    "signatureFileName": "",
+                    "signatureFileNameSelect": "0"
+                },
+                {
+                    "name": "key.aes",
+                    "maxFileSize": "16",
+                    "flagFailSafe": false,
+                    "flagSecure": false,
+                    "flagVendor": false,
+                    "flagStatic": false,
+                    "flagNoSignatureTest": false,
+                    "flagPublicWrite": false,
+                    "flagPublicRead": false,
+                    "fileToken": "",
+                    "certificationFileName": "",
+                    "signatureFileName": "",
+                    "signatureFileNameSelect": "0"
+                }
+            ]
+        }
+    ],
+    "files": []
+}
