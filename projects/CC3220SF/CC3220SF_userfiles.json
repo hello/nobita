@@ -1,42 +1,79 @@
 {
-    "name": "/",
     "folders": [
         {
-            "name": "cert",
             "folders": [],
             "files": [
                 {
-                    "name": "digi.cer",
-                    "maxFileSize": "947",
-                    "flagFailSafe": false,
-                    "flagSecure": false,
-                    "flagVendor": false,
-                    "flagStatic": false,
-                    "flagNoSignatureTest": false,
-                    "flagPublicWrite": false,
-                    "flagPublicRead": false,
-                    "fileToken": "",
                     "certificationFileName": "",
+                    "fileToken": "",
+                    "flagFailSafe": false,
+                    "flagNoSignatureTest": false,
+                    "flagPublicRead": false,
+                    "flagPublicWrite": false,
+                    "flagSecure": false,
+                    "flagStatic": false,
+                    "flagVendor": false,
+                    "maxFileSize": "947",
+                    "name": "digi.cer",
                     "signatureFileName": "",
                     "signatureFileNameSelect": "0"
                 },
                 {
-                    "name": "key.aes",
-                    "maxFileSize": "16",
-                    "flagFailSafe": false,
-                    "flagSecure": false,
-                    "flagVendor": false,
-                    "flagStatic": false,
-                    "flagNoSignatureTest": false,
-                    "flagPublicWrite": false,
-                    "flagPublicRead": false,
-                    "fileToken": "",
                     "certificationFileName": "",
+                    "fileToken": "",
+                    "flagFailSafe": false,
+                    "flagNoSignatureTest": false,
+                    "flagPublicRead": false,
+                    "flagPublicWrite": false,
+                    "flagSecure": false,
+                    "flagStatic": false,
+                    "flagVendor": false,
+                    "maxFileSize": "16",
+                    "name": "key.aes",
                     "signatureFileName": "",
                     "signatureFileNameSelect": "0"
                 }
-            ]
+            ],
+            "name": "cert"
+        },
+        {
+            "folders": [],
+            "files": [
+                {
+                    "certificationFileName": "ca.der",
+                    "fileToken": "",
+                    "flagFailSafe": false,
+                    "flagNoSignatureTest": false,
+                    "flagPublicRead": true,
+                    "flagPublicWrite": true,
+                    "flagSecure": true,
+                    "flagStatic": false,
+                    "flagVendor": false,
+                    "maxFileSize": "139660",
+                    "name": "mcuimg.bin",
+                    "signatureFileName": "ca-priv-key.der",
+                    "signatureFileNameSelect": "1"
+                }
+            ],
+            "name": "sys"
         }
     ],
-    "files": []
+    "files": [
+        {
+            "name": "ca.der",
+            "maxFileSize": "933",
+            "flagFailSafe": false,
+            "flagSecure": false,
+            "flagVendor": false,
+            "flagStatic": false,
+            "flagNoSignatureTest": false,
+            "flagPublicWrite": false,
+            "flagPublicRead": false,
+            "fileToken": "",
+            "certificationFileName": "",
+            "signatureFileName": "",
+            "signatureFileNameSelect": "0"
+        }
+    ],
+    "name": "/"
 }

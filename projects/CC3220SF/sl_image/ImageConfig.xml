@@ -1,14 +1,10 @@
 <?xml version="1.0" ?>
 <Root>
-  <ImageBuilderProp IsTheDeviceSecure="true" StorageCapacityBytes="2097152">
+  <ImageBuilderProp IsTheDeviceSecure="true" StorageCapacityBytes="4194304">
     <DevelopmentImage>
-      <DevMacAddress>08:00:28:5b:58:aa</DevMacAddress>
+      <DevMacAddress>88:4a:ea:75:f7:23</DevMacAddress>
     </DevelopmentImage>
-    <RetToFactoryFlagsList>
-      <RetToFactoryFlag>RET_TO_IMAGE_HOST</RetToFactoryFlag>
-      <RetToFactoryFlag>RET_TO_DEFAULT_HOST</RetToFactoryFlag>
-      <RetToFactoryFlag>RET_TO_IMAGE_GPIO</RetToFactoryFlag>
-    </RetToFactoryFlagsList>
+    <RetToFactoryFlagsList/>
   </ImageBuilderProp>
   <CommandsSetList>
     <CommandsSet>
@@ -16,12 +12,12 @@
         <CommandFormatStorage EraseStorage="false"/>
       </Command>
       <Command>
-        <CommandWriteCertificateStore SignatureFileName="C:\TI\SimpleLink Wi-Fi\Tools\ImageCreator\ImageCreator-1.0.0.16\files\certstore.lst.signed.bin">
-          <FileLocation>C:\TI\SimpleLink Wi-Fi\Tools\ImageCreator\ImageCreator-1.0.0.16\files\certstore.lst</FileLocation>
+        <CommandWriteCertificateStore SignatureFileName="./projects\CC3220SF\sl_css\certstore.151124p.sign">
+          <FileLocation>./projects\CC3220SF\sl_cs\certstore.151124p.lst</FileLocation>
         </CommandWriteCertificateStore>
       </Command>
       <Command>
-        <CommandWriteServicePack ServicePackVersion="UCF_FLASH">
+        <CommandWriteServicePack ServicePackVersion="UCF_ROM">
           <FileLocation>./projects\CC3220SF\sl_sp\SP_3.0.99.4.2.0.0.0.2.2.0.3.bin</FileLocation>
         </CommandWriteServicePack>
       </Command>
@@ -63,9 +59,45 @@
       </Command>
       <Command>
         <CommandWriteFile>
+          <FileSystemName>ca.der</FileSystemName>
+          <FileOpenFlagsList/>
+          <MaxFileSize>933</MaxFileSize>
+          <FileLocation>./projects\CC3220SF\sl_fs\ca.der</FileLocation>
+        </CommandWriteFile>
+      </Command>
+      <Command>
+        <CommandWriteFile>
+          <FileSystemName>/cert/digi.cer</FileSystemName>
+          <FileOpenFlagsList/>
+          <MaxFileSize>947</MaxFileSize>
+          <FileLocation>./projects\CC3220SF\sl_fs\cert\digi.cer</FileLocation>
+        </CommandWriteFile>
+      </Command>
+      <Command>
+        <CommandWriteFile>
+          <FileSystemName>/cert/key.aes</FileSystemName>
+          <FileOpenFlagsList/>
+          <MaxFileSize>16</MaxFileSize>
+          <FileLocation>./projects\CC3220SF\sl_fs\cert\key.aes</FileLocation>
+        </CommandWriteFile>
+      </Command>
+      <Command>
+        <CommandWriteFile CertificationFileName="ca.der" SignatureFileName="./projects\CC3220SF\sl_fs\sys\mcuflashimg.bin.sig">
+          <FileSystemName>/sys/mcuflashimg.bin</FileSystemName>
+          <FileOpenFlagsList>
+            <FileOpenFlag>FILE_OPEN_FLAG_PUBLIC_WRITE</FileOpenFlag>
+            <FileOpenFlag>FILE_OPEN_FLAG_PUBLIC_READ</FileOpenFlag>
+            <FileOpenFlag>FILE_OPEN_FLAG_SECURE</FileOpenFlag>
+          </FileOpenFlagsList>
+          <MaxFileSize>139660</MaxFileSize>
+          <FileLocation>./projects\CC3220SF\sl_fs\sys\mcuflashimg.bin</FileLocation>
+        </CommandWriteFile>
+      </Command>
+      <Command>
+        <CommandWriteFile>
           <FileSystemName>/tmp/CrashMiniDump.bin</FileSystemName>
           <MaxFileSize>24576</MaxFileSize>
-          <FileLocation>C:\TI\SimpleLink Wi-Fi\Tools\ImageCreator\ImageCreator-1.0.0.16\files\CrashMiniDump.bin</FileLocation>
+          <FileLocation>C:\Users\chrisjohnson\Desktop\nobita\files\CrashMiniDump.bin</FileLocation>
         </CommandWriteFile>
       </Command>
     </CommandsSet>

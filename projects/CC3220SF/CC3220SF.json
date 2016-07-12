@@ -1,19 +1,19 @@
 {
     "header": {
+        "DEV_MAC_ADDR": "88:4a:ea:75:f7:23",
         "Description": "",
         "DeviceType": "CC3220FS",
-        "EnableReturnToFactory": "defaults_and_image",
-        "IsTheDeviceSecure": false,
+        "EnableReturnToFactory": "none",
+        "IsTheDeviceSecure": true,
         "KeyFileLocation": "",
         "Mode": "development",
         "Name": "CC3220SF",
-        "ProductionNWP": "0",
+        "ProductionNWP": "1",
         "ReturnToFactoryGPIO": "1",
         "ServicePackFileLocation": "SP_3.0.99.4.2.0.0.0.2.2.0.3.bin",
-        "StorageCapacityBytes": "16777216",
-        "UseDefaultCertStore": true,
-        "UseKey": false,
-        "DEV_MAC_ADDR": "08:00:28:5b:58:aa"
+        "StorageCapacityBytes": "4194304",
+        "UseDefaultCertStore": false,
+        "UseKey": false
     },
     "systemFiles": {
         "CONFIG_TYPE_AP": {
@@ -99,7 +99,7 @@
             "SL_EVENT_CLASS_NETAPP": 0,
             "SL_EVENT_CLASS_NETCFG": 0,
             "SL_EVENT_CLASS_WLAN": 0,
-            "START_ROLE": "2",
+            "START_ROLE": "0",
             "STA_START_APPS": 5,
             "STA_TX_POWER_LEVEL": "0",
             "SystemFileId": "CONFIG_TYPE_MODE"
@@ -111,8 +111,8 @@
             "USEFASTCONNECT": "0"
         },
         "FILES": {
-            "CSS_FILE_NAME": "",
-            "CS_FILE_NAME": "",
+            "CSS_FILE_NAME": "certstore.151124p.sign",
+            "CS_FILE_NAME": "certstore.151124p.lst",
             "SP_FILE_NAME": "SP_3.0.99.4.2.0.0.0.2.2.0.3.bin",
             "SystemFileId": "FILES"
         }
