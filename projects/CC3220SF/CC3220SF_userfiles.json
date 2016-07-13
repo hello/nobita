@@ -40,23 +40,8 @@
             "folders": [],
             "files": [
                 {
-                    "certificationFileName": "ca.der",
-                    "fileToken": "",
-                    "flagFailSafe": false,
-                    "flagNoSignatureTest": false,
-                    "flagPublicRead": true,
-                    "flagPublicWrite": true,
-                    "flagSecure": true,
-                    "flagStatic": false,
-                    "flagVendor": false,
-                    "maxFileSize": "139660",
-                    "name": "mcuimg.bin",
-                    "signatureFileName": "ca-priv-key.der",
-                    "signatureFileNameSelect": "1"
-                },
-                {
-                    "name": "mcuimg1",
-                    "maxFileSize": "524288",
+                    "name": "mcuimg1.bin",
+                    "maxFileSize": "168240",
                     "flagFailSafe": false,
                     "flagSecure": false,
                     "flagVendor": false,
