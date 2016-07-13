@@ -53,21 +53,6 @@
                     "name": "mcuimg.bin",
                     "signatureFileName": "ca-priv-key.der",
                     "signatureFileNameSelect": "1"
-                },
-                {
-                    "name": "mcuimg1",
-                    "maxFileSize": "524288",
-                    "flagFailSafe": false,
-                    "flagSecure": false,
-                    "flagVendor": false,
-                    "flagStatic": false,
-                    "flagNoSignatureTest": false,
-                    "flagPublicWrite": false,
-                    "flagPublicRead": false,
-                    "fileToken": "",
-                    "certificationFileName": "",
-                    "signatureFileName": "",
-                    "signatureFileNameSelect": "0"
                 }
             ],
             "name": "sys"
@@ -75,17 +60,17 @@
     ],
     "files": [
         {
-            "certificationFileName": "",
-            "fileToken": "",
-            "flagFailSafe": false,
-            "flagNoSignatureTest": false,
-            "flagPublicRead": false,
-            "flagPublicWrite": false,
-            "flagSecure": false,
-            "flagStatic": false,
-            "flagVendor": false,
-            "maxFileSize": "933",
             "name": "ca.der",
+            "maxFileSize": "933",
+            "flagFailSafe": false,
+            "flagSecure": false,
+            "flagVendor": false,
+            "flagStatic": false,
+            "flagNoSignatureTest": false,
+            "flagPublicWrite": false,
+            "flagPublicRead": false,
+            "fileToken": "",
+            "certificationFileName": "",
             "signatureFileName": "",
             "signatureFileNameSelect": "0"
         }
