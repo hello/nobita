@@ -82,6 +82,18 @@
         </CommandWriteFile>
       </Command>
       <Command>
+        <CommandWriteFile CertificationFileName="ca.der" SignatureFileName="./projects\CC3220SF\sl_fs\sys\mcuflashimg.bin.sig">
+          <FileSystemName>/sys/mcuflashimg.bin</FileSystemName>
+          <FileOpenFlagsList>
+            <FileOpenFlag>FILE_OPEN_FLAG_PUBLIC_WRITE</FileOpenFlag>
+            <FileOpenFlag>FILE_OPEN_FLAG_PUBLIC_READ</FileOpenFlag>
+            <FileOpenFlag>FILE_OPEN_FLAG_SECURE</FileOpenFlag>
+          </FileOpenFlagsList>
+          <MaxFileSize>139660</MaxFileSize>
+          <FileLocation>./projects\CC3220SF\sl_fs\sys\mcuflashimg.bin</FileLocation>
+        </CommandWriteFile>
+      </Command>
+      <Command>
         <CommandWriteFile>
           <FileSystemName>/tmp/CrashMiniDump.bin</FileSystemName>
           <MaxFileSize>24576</MaxFileSize>
