@@ -1,6 +1,6 @@
 {
     "header": {
-        "DEV_MAC_ADDR": "88:4a:ea:76:00:2a",
+        "DEV_MAC_ADDR": "88:4a:ea:75:f7:53",
         "Description": "",
         "DeviceType": "CC3220FS",
         "EnableReturnToFactory": "none",
@@ -11,7 +11,7 @@
         "ProductionNWP": "1",
         "ReturnToFactoryGPIO": "1",
         "ServicePackFileLocation": "SP_3.0.99.4.2.0.0.0.2.2.0.3.bin",
-        "StorageCapacityBytes": "4194304",
+        "StorageCapacityBytes": "2097152",
         "UseDefaultCertStore": false,
         "UseKey": false
     },
