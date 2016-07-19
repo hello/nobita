@@ -2,7 +2,7 @@
 <Root>
   <ImageBuilderProp IsTheDeviceSecure="true" StorageCapacityBytes="4194304">
     <DevelopmentImage>
-      <DevMacAddress>88:4a:ea:75:f7:23</DevMacAddress>
+      <DevMacAddress>88:4a:ea:76:00:2a</DevMacAddress>
     </DevelopmentImage>
     <RetToFactoryFlagsList/>
   </ImageBuilderProp>
@@ -59,14 +59,6 @@
       </Command>
       <Command>
         <CommandWriteFile>
-          <FileSystemName>ca.der</FileSystemName>
-          <FileOpenFlagsList/>
-          <MaxFileSize>933</MaxFileSize>
-          <FileLocation>./projects\CC3220SF\sl_fs\ca.der</FileLocation>
-        </CommandWriteFile>
-      </Command>
-      <Command>
-        <CommandWriteFile>
           <FileSystemName>/cert/digi.cer</FileSystemName>
           <FileOpenFlagsList/>
           <MaxFileSize>947</MaxFileSize>
@@ -82,15 +74,11 @@
         </CommandWriteFile>
       </Command>
       <Command>
-        <CommandWriteFile CertificationFileName="ca.der" SignatureFileName="./projects\CC3220SF\sl_fs\sys\mcuflashimg.bin.sig">
-          <FileSystemName>/sys/mcuflashimg.bin</FileSystemName>
-          <FileOpenFlagsList>
-            <FileOpenFlag>FILE_OPEN_FLAG_PUBLIC_WRITE</FileOpenFlag>
-            <FileOpenFlag>FILE_OPEN_FLAG_PUBLIC_READ</FileOpenFlag>
-            <FileOpenFlag>FILE_OPEN_FLAG_SECURE</FileOpenFlag>
-          </FileOpenFlagsList>
-          <MaxFileSize>139660</MaxFileSize>
-          <FileLocation>./projects\CC3220SF\sl_fs\sys\mcuflashimg.bin</FileLocation>
+        <CommandWriteFile>
+          <FileSystemName>/ota/mcuimg1.bin</FileSystemName>
+          <FileOpenFlagsList/>
+          <MaxFileSize>168232</MaxFileSize>
+          <FileLocation>./projects\CC3220SF\sl_fs\ota\mcuimg1.bin</FileLocation>
         </CommandWriteFile>
       </Command>
       <Command>
