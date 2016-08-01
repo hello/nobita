@@ -40,17 +40,17 @@
             "folders": [],
             "files": [
                 {
-                    "certificationFileName": "",
-                    "fileToken": "",
-                    "flagFailSafe": false,
-                    "flagNoSignatureTest": false,
-                    "flagPublicRead": false,
-                    "flagPublicWrite": false,
-                    "flagSecure": false,
-                    "flagStatic": false,
-                    "flagVendor": false,
-                    "maxFileSize": "168232",
                     "name": "mcuimg1.bin",
+                    "maxFileSize": "285064",
+                    "flagFailSafe": false,
+                    "flagSecure": false,
+                    "flagVendor": false,
+                    "flagStatic": false,
+                    "flagNoSignatureTest": false,
+                    "flagPublicWrite": false,
+                    "flagPublicRead": false,
+                    "fileToken": "",
+                    "certificationFileName": "",
                     "signatureFileName": "",
                     "signatureFileNameSelect": "0"
                 }
@@ -62,7 +62,7 @@
             "files": [
                 {
                     "name": "mcuimg.bin",
-                    "maxFileSize": "22940",
+                    "maxFileSize": "23000",
                     "flagFailSafe": false,
                     "flagSecure": true,
                     "flagVendor": false,

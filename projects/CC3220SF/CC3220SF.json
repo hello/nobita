@@ -1,17 +1,17 @@
 {
     "header": {
-        "DEV_MAC_ADDR": "88:4a:ea:75:f7:53",
+        "DEV_MAC_ADDR": "88:4a:ea:75:f7:23",
         "Description": "",
         "DeviceType": "CC3220FS",
-        "EnableReturnToFactory": "none",
+        "EnableReturnToFactory": "defaults_and_image",
         "IsTheDeviceSecure": true,
         "KeyFileLocation": "",
-        "Mode": "development",
+        "Mode": "production",
         "Name": "CC3220SF",
         "ProductionNWP": "1",
         "ReturnToFactoryGPIO": "1",
         "ServicePackFileLocation": "SP_3.0.99.4.2.0.0.0.2.2.0.3.bin",
-        "StorageCapacityBytes": "2097152",
+        "StorageCapacityBytes": "4194304",
         "UseDefaultCertStore": false,
         "UseKey": false
     },
@@ -82,9 +82,9 @@
             "IGNORE_FORCE_AP": "1",
             "P2P_CLS_START_APPS": 5,
             "P2P_GO_START_APPS": 15,
-            "PHY_AP_HIGH_TX_POWER": 0,
+            "PHY_AP_HIGH_TX_POWER": "0",
             "PHY_CAL_MODE": "0",
-            "PHY_STA_HIGH_TX_POWER": 0,
+            "PHY_STA_HIGH_TX_POWER": "0",
             "PROVISIONING_MODE": 2,
             "PROVISIONING_MONITOR_TIMER": 0,
             "PROVISIONING_RESULT": 0,
@@ -108,7 +108,7 @@
             "AUTOPROVISIONING": "1",
             "AUTOSTART": "1",
             "CONNECTTOANYP2P": "0",
-            "USEFASTCONNECT": "0"
+            "USEFASTCONNECT": "1"
         },
         "FILES": {
             "CSS_FILE_NAME": "certstore.151124p.sign",
