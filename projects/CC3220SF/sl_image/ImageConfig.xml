@@ -1,10 +1,13 @@
 <?xml version="1.0" ?>
 <Root>
-  <ImageBuilderProp IsTheDeviceSecure="true" StorageCapacityBytes="2097152">
+  <ImageBuilderProp IsTheDeviceSecure="true" StorageCapacityBytes="4194304">
     <DevelopmentImage>
-      <DevMacAddress>88:4a:ea:75:f7:53</DevMacAddress>
+      <DevMacAddress>88:4a:ea:76:0d:09</DevMacAddress>
     </DevelopmentImage>
-    <RetToFactoryFlagsList/>
+    <RetToFactoryFlagsList>
+      <RetToFactoryFlag>RET_TO_IMAGE_HOST</RetToFactoryFlag>
+      <RetToFactoryFlag>RET_TO_DEFAULT_HOST</RetToFactoryFlag>
+    </RetToFactoryFlagsList>
   </ImageBuilderProp>
   <CommandsSetList>
     <CommandsSet>
@@ -18,7 +21,7 @@
       </Command>
       <Command>
         <CommandWriteServicePack ServicePackVersion="UCF_ROM">
-          <FileLocation>./projects\CC3220SF\sl_sp\SP_3.0.99.4.2.0.0.0.2.2.0.3.bin</FileLocation>
+          <FileLocation>./projects\CC3220SF\sl_sp\SP_3.0.99.11.2.0.0.0.2.2.0.3.bin</FileLocation>
         </CommandWriteServicePack>
       </Command>
       <Command>
@@ -85,7 +88,7 @@
         <CommandWriteFile>
           <FileSystemName>/ota/mcuimg1.bin</FileSystemName>
           <FileOpenFlagsList/>
-          <MaxFileSize>168232</MaxFileSize>
+          <MaxFileSize>276488</MaxFileSize>
           <FileLocation>./projects\CC3220SF\sl_fs\ota\mcuimg1.bin</FileLocation>
         </CommandWriteFile>
       </Command>
@@ -95,7 +98,7 @@
           <FileOpenFlagsList>
             <FileOpenFlag>FILE_OPEN_FLAG_SECURE</FileOpenFlag>
           </FileOpenFlagsList>
-          <MaxFileSize>22940</MaxFileSize>
+          <MaxFileSize>25092</MaxFileSize>
           <FileLocation>./projects\CC3220SF\sl_fs\sys\mcuflashimg.bin</FileLocation>
         </CommandWriteFile>
       </Command>
