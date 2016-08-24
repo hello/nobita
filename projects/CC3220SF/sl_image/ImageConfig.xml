@@ -1,9 +1,6 @@
 <?xml version="1.0" ?>
 <Root>
   <ImageBuilderProp IsTheDeviceSecure="true" StorageCapacityBytes="4194304">
-    <DevelopmentImage>
-      <DevMacAddress>88:4a:ea:76:0d:09</DevMacAddress>
-    </DevelopmentImage>
     <RetToFactoryFlagsList>
       <RetToFactoryFlag>RET_TO_IMAGE_HOST</RetToFactoryFlag>
       <RetToFactoryFlag>RET_TO_DEFAULT_HOST</RetToFactoryFlag>
@@ -88,7 +85,7 @@
         <CommandWriteFile>
           <FileSystemName>/ota/mcuimg1.bin</FileSystemName>
           <FileOpenFlagsList/>
-          <MaxFileSize>276488</MaxFileSize>
+          <MaxFileSize>298664</MaxFileSize>
           <FileLocation>./projects\CC3220SF\sl_fs\ota\mcuimg1.bin</FileLocation>
         </CommandWriteFile>
       </Command>

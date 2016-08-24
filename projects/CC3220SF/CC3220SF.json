@@ -1,12 +1,11 @@
 {
     "header": {
-        "DEV_MAC_ADDR": "88:4a:ea:76:0d:09",
         "Description": "",
         "DeviceType": "CC3220FS",
         "EnableReturnToFactory": "defaults_and_image",
         "IsTheDeviceSecure": true,
         "KeyFileLocation": "",
-        "Mode": "development",
+        "Mode": "production",
         "Name": "CC3220SF",
         "ProductionNWP": "1",
         "ReturnToFactoryGPIO": "1",
