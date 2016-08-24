@@ -85,7 +85,7 @@
         <CommandWriteFile>
           <FileSystemName>/ota/mcuimg1.bin</FileSystemName>
           <FileOpenFlagsList/>
-          <MaxFileSize>290472</MaxFileSize>
+          <MaxFileSize>298672</MaxFileSize>
           <FileLocation>./projects\CC3220SF\sl_fs\ota\mcuimg1.bin</FileLocation>
         </CommandWriteFile>
       </Command>
