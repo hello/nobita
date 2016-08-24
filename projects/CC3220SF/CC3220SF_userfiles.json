@@ -41,7 +41,7 @@
             "files": [
                 {
                     "name": "mcuimg1.bin",
-                    "maxFileSize": "298664",
+                    "maxFileSize": "290472",
                     "flagFailSafe": false,
                     "flagSecure": false,
                     "flagVendor": false,

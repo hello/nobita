@@ -1,5 +1,6 @@
 {
     "header": {
+        "DEV_MAC_ADDR": "f0:c7:7f:17:3a:23",
         "Description": "",
         "DeviceType": "CC3220FS",
         "EnableReturnToFactory": "defaults_and_image",
