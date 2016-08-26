@@ -1,0 +1,120 @@
+{
+    "header": {
+        "DEV_MAC_ADDR": "88:4a:ea:75:f7:53",
+        "Description": "",
+        "DeviceType": "CC3220FS",
+        "EnableReturnToFactory": "none",
+        "IsTheDeviceSecure": true,
+        "KeyFileLocation": "",
+        "Mode": "development",
+        "Name": "CC3220SF",
+        "ProductionNWP": "1",
+        "ReturnToFactoryGPIO": "1",
+        "ServicePackFileLocation": "SP_3.0.99.4.2.0.0.0.2.2.0.3.bin",
+        "StorageCapacityBytes": "2097152",
+        "UseDefaultCertStore": false,
+        "UseKey": false
+    },
+    "systemFiles": {
+        "CONFIG_TYPE_AP": {
+            "CHANNEL": "1",
+            "HIDDEN_SSID": "0",
+            "MAX_STT": "4",
+            "PASSWORD": "",
+            "SECURITY": "0",
+            "SSID": "mysimplelink"
+        },
+        "CONFIG_TYPE_DEVICE_NAME": {
+            "DEVICE_URN": "Sense",
+            "DOMAIN_NAME": "mysimplelink.net"
+        },
+        "CONFIG_TYPE_DHCP_SRV": {
+            "AP_DHCP_SERVER_LAST_IP_ADDRESS": "10.123.45.254",
+            "AP_DHCP_SERVER_LEASE_TIME": "24",
+            "AP_DHCP_SERVER_START_IP_ADDRESS": "10.123.45.2",
+            "SystemFileId": "CONFIG_TYPE_DHCP_SRV"
+        },
+        "CONFIG_TYPE_IP_CONFIG": {
+            "AP_ARP_RENEW_TIME": null,
+            "AP_DEFAULT_GATEWAY": "10.123.45.1",
+            "AP_DHCP_CLIENT_TIME_OUT": null,
+            "AP_DHCP_SERVER_LAST_IP_ADDRESS": "10.123.45.254",
+            "AP_DHCP_SERVER_MODE": null,
+            "AP_DHCP_SERVER_START_IP_ADDRESS": "10.123.45.2",
+            "AP_DNS_CLIENT_TIME": null,
+            "AP_INACTIVITY_TIME": null,
+            "AP_IPV4_DNS_SERVER": "10.123.45.1",
+            "AP_IPV6_DNS_SERVER": null,
+            "AP_IP_MODE": null,
+            "AP_KEEP_ALIVE_TIME": null,
+            "AP_STATIC_IP": "10.123.45.1",
+            "AP_STATIC_IPV6_GLOBAL_ADDRESS": null,
+            "AP_STATIC_IPV6_LOCAL_ADDRESS": null,
+            "AP_SUBNET_MASK": null,
+            "STA_ARP_RENEW_TIME": null,
+            "STA_DEFAULT_GATEWAY": "192.168.1.31",
+            "STA_DHCP_CLIENT_TIME_OUT": null,
+            "STA_DHCP_SERVER_LAST_IP_ADDRESS": null,
+            "STA_DHCP_SERVER_MODE": null,
+            "STA_DHCP_SERVER_START_IP_ADDRESS": null,
+            "STA_DNS_CLIENT_TIME": null,
+            "STA_INACTIVITY_TIME": null,
+            "STA_IPV4_DNS_SERVER": "192.168.1.31",
+            "STA_IPV6_DNS_SERVER": null,
+            "STA_IP_MODE": "True",
+            "STA_KEEP_ALIVE_TIME": null,
+            "STA_STATIC_IP": "192.168.1.101",
+            "STA_STATIC_IPV6_GLOBAL_ADDRESS": null,
+            "STA_STATIC_IPV6_LOCAL_ADDRESS": null,
+            "STA_SUBNET_MASK": "255.255.255.0",
+            "SystemFileId": "CONFIG_TYPE_IP_CONFIG"
+        },
+        "CONFIG_TYPE_MAC": {
+            "MAC_ADDR": "08:00:28:11:22:33",
+            "SystemFileId": "CONFIG_TYPE_MAC",
+            "USE_DEFAULT": 1
+        },
+        "CONFIG_TYPE_MODE": {
+            "AP_START_APPS": 15,
+            "AP_TX_POWER_LEVEL": "0",
+            "AUTO_PROV_EXTERNAL_CONFIRMATION": "0",
+            "COUNTRY_CODE": "1",
+            "IGNORE_FORCE_AP": "1",
+            "P2P_CLS_START_APPS": 5,
+            "P2P_GO_START_APPS": 15,
+            "PHY_AP_HIGH_TX_POWER": 0,
+            "PHY_CAL_MODE": "0",
+            "PHY_STA_HIGH_TX_POWER": 0,
+            "PROVISIONING_MODE": 2,
+            "PROVISIONING_MONITOR_TIMER": 0,
+            "PROVISIONING_RESULT": 0,
+            "PROVISIONING_ROLE_AFTER_SUCCESS": 0,
+            "PROVISIONING_SAVED_AUTO_START": 1,
+            "PROVISIONING_SAVED_ROLE": 0,
+            "PROVISIONING_STATE": 0,
+            "SL_EVENT_CLASS_BSD": 0,
+            "SL_EVENT_CLASS_DEVICE": 0,
+            "SL_EVENT_CLASS_FS": 0,
+            "SL_EVENT_CLASS_GLOBAL": 0,
+            "SL_EVENT_CLASS_NETAPP": 0,
+            "SL_EVENT_CLASS_NETCFG": 0,
+            "SL_EVENT_CLASS_WLAN": 0,
+            "START_ROLE": "0",
+            "STA_START_APPS": 5,
+            "STA_TX_POWER_LEVEL": "0",
+            "SystemFileId": "CONFIG_TYPE_MODE"
+        },
+        "CONFIG_TYPE_STA_CONFIG": {
+            "AUTOPROVISIONING": "1",
+            "AUTOSTART": "1",
+            "CONNECTTOANYP2P": "0",
+            "USEFASTCONNECT": "0"
+        },
+        "FILES": {
+            "CSS_FILE_NAME": "certstore.151124p.sign",
+            "CS_FILE_NAME": "certstore.151124p.lst",
+            "SP_FILE_NAME": "SP_3.0.99.4.2.0.0.0.2.2.0.3.bin",
+            "SystemFileId": "FILES"
+        }
+    }
+}

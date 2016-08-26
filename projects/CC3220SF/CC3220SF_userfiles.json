@@ -1,0 +1,100 @@
+{
+    "folders": [
+        {
+            "folders": [],
+            "files": [
+                {
+                    "certificationFileName": "",
+                    "fileToken": "",
+                    "flagFailSafe": false,
+                    "flagNoSignatureTest": false,
+                    "flagPublicRead": false,
+                    "flagPublicWrite": false,
+                    "flagSecure": false,
+                    "flagStatic": false,
+                    "flagVendor": false,
+                    "maxFileSize": "947",
+                    "name": "digi.cer",
+                    "signatureFileName": "",
+                    "signatureFileNameSelect": "0"
+                },
+                {
+                    "certificationFileName": "",
+                    "fileToken": "",
+                    "flagFailSafe": false,
+                    "flagNoSignatureTest": false,
+                    "flagPublicRead": false,
+                    "flagPublicWrite": false,
+                    "flagSecure": false,
+                    "flagStatic": false,
+                    "flagVendor": false,
+                    "maxFileSize": "16",
+                    "name": "key.aes",
+                    "signatureFileName": "",
+                    "signatureFileNameSelect": "0"
+                }
+            ],
+            "name": "cert"
+        },
+        {
+            "folders": [],
+            "files": [
+                {
+                    "certificationFileName": "",
+                    "fileToken": "",
+                    "flagFailSafe": false,
+                    "flagNoSignatureTest": false,
+                    "flagPublicRead": false,
+                    "flagPublicWrite": false,
+                    "flagSecure": false,
+                    "flagStatic": false,
+                    "flagVendor": false,
+                    "maxFileSize": "168232",
+                    "name": "mcuimg1.bin",
+                    "signatureFileName": "",
+                    "signatureFileNameSelect": "0"
+                }
+            ],
+            "name": "ota"
+        },
+        {
+            "folders": [],
+            "files": [
+                {
+                    "name": "mcuimg.bin",
+                    "maxFileSize": "22940",
+                    "flagFailSafe": false,
+                    "flagSecure": true,
+                    "flagVendor": false,
+                    "flagStatic": false,
+                    "flagNoSignatureTest": false,
+                    "flagPublicWrite": false,
+                    "flagPublicRead": false,
+                    "fileToken": "",
+                    "certificationFileName": "ca.der",
+                    "signatureFileName": "ca-priv-key.der",
+                    "signatureFileNameSelect": "1"
+                }
+            ],
+            "name": "sys"
+        }
+    ],
+    "files": [
+        {
+            "certificationFileName": "",
+            "fileToken": "",
+            "flagFailSafe": false,
+            "flagNoSignatureTest": false,
+            "flagPublicRead": false,
+            "flagPublicWrite": false,
+            "flagSecure": false,
+            "flagStatic": false,
+            "flagVendor": false,
+            "maxFileSize": "933",
+            "name": "ca.der",
+            "signatureFileName": "",
+            "signatureFileNameSelect": "0"
+        }
+    ],
+    "name": "/"
+}
