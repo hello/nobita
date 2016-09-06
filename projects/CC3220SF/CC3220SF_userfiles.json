@@ -49,7 +49,7 @@
                     "flagSecure": true,
                     "flagStatic": false,
                     "flagVendor": false,
-                    "maxFileSize": "25092",
+                    "maxFileSize": "23940",
                     "name": "mcuimg.bin",
                     "signatureFileName": "ca-priv-key.der",
                     "signatureFileNameSelect": "1"
@@ -58,12 +58,11 @@
             "name": "sys"
         },
         {
-            "name": "ota",
             "folders": [],
             "files": [
                 {
                     "name": "mcuimg1.bin",
-                    "maxFileSize": "298672",
+                    "maxFileSize": "304800",
                     "flagFailSafe": false,
                     "flagSecure": false,
                     "flagVendor": false,
@@ -76,7 +75,29 @@
                     "signatureFileName": "",
                     "signatureFileNameSelect": "0"
                 }
-            ]
+            ],
+            "name": "ota"
+        },
+        {
+            "folders": [],
+            "files": [
+                {
+                    "certificationFileName": "",
+                    "fileToken": "",
+                    "flagFailSafe": false,
+                    "flagNoSignatureTest": false,
+                    "flagPublicRead": false,
+                    "flagPublicWrite": false,
+                    "flagSecure": false,
+                    "flagStatic": false,
+                    "flagVendor": false,
+                    "maxFileSize": "70768",
+                    "name": "factory.bin",
+                    "signatureFileName": "",
+                    "signatureFileNameSelect": "0"
+                }
+            ],
+            "name": "top"
         }
     ],
     "files": [

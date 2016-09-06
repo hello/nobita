@@ -87,7 +87,7 @@
           <FileOpenFlagsList>
             <FileOpenFlag>FILE_OPEN_FLAG_SECURE</FileOpenFlag>
           </FileOpenFlagsList>
-          <MaxFileSize>25092</MaxFileSize>
+          <MaxFileSize>23940</MaxFileSize>
           <FileLocation>./projects\CC3220SF\sl_fs\sys\mcuflashimg.bin</FileLocation>
         </CommandWriteFile>
       </Command>
@@ -95,8 +95,16 @@
         <CommandWriteFile>
           <FileSystemName>/ota/mcuimg1.bin</FileSystemName>
           <FileOpenFlagsList/>
-          <MaxFileSize>298672</MaxFileSize>
+          <MaxFileSize>304800</MaxFileSize>
           <FileLocation>./projects\CC3220SF\sl_fs\ota\mcuimg1.bin</FileLocation>
+        </CommandWriteFile>
+      </Command>
+      <Command>
+        <CommandWriteFile>
+          <FileSystemName>/top/factory.bin</FileSystemName>
+          <FileOpenFlagsList/>
+          <MaxFileSize>70768</MaxFileSize>
+          <FileLocation>./projects\CC3220SF\sl_fs\top\factory.bin</FileLocation>
         </CommandWriteFile>
       </Command>
       <Command>
