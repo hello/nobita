@@ -40,6 +40,27 @@
             "folders": [],
             "files": [
                 {
+                    "certificationFileName": "",
+                    "fileToken": "",
+                    "flagFailSafe": false,
+                    "flagNoSignatureTest": false,
+                    "flagPublicRead": false,
+                    "flagPublicWrite": false,
+                    "flagSecure": false,
+                    "flagStatic": false,
+                    "flagVendor": false,
+                    "maxFileSize": "304800",
+                    "name": "mcuimg1.bin",
+                    "signatureFileName": "",
+                    "signatureFileNameSelect": "0"
+                }
+            ],
+            "name": "ota"
+        },
+        {
+            "folders": [],
+            "files": [
+                {
                     "certificationFileName": "ca.der",
                     "fileToken": "",
                     "flagFailSafe": false,
@@ -61,38 +82,17 @@
             "folders": [],
             "files": [
                 {
-                    "name": "mcuimg1.bin",
-                    "maxFileSize": "304800",
-                    "flagFailSafe": false,
-                    "flagSecure": false,
-                    "flagVendor": false,
-                    "flagStatic": false,
-                    "flagNoSignatureTest": false,
-                    "flagPublicWrite": false,
-                    "flagPublicRead": false,
-                    "fileToken": "",
-                    "certificationFileName": "",
-                    "signatureFileName": "",
-                    "signatureFileNameSelect": "0"
-                }
-            ],
-            "name": "ota"
-        },
-        {
-            "folders": [],
-            "files": [
-                {
-                    "certificationFileName": "",
-                    "fileToken": "",
-                    "flagFailSafe": false,
-                    "flagNoSignatureTest": false,
-                    "flagPublicRead": false,
-                    "flagPublicWrite": false,
-                    "flagSecure": false,
-                    "flagStatic": false,
-                    "flagVendor": false,
-                    "maxFileSize": "70768",
                     "name": "factory.bin",
+                    "maxFileSize": "70888",
+                    "flagFailSafe": false,
+                    "flagSecure": false,
+                    "flagVendor": false,
+                    "flagStatic": false,
+                    "flagNoSignatureTest": false,
+                    "flagPublicWrite": false,
+                    "flagPublicRead": false,
+                    "fileToken": "",
+                    "certificationFileName": "",
                     "signatureFileName": "",
                     "signatureFileNameSelect": "0"
                 }
