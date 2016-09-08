@@ -83,7 +83,7 @@
             "files": [
                 {
                     "name": "factory.bin",
-                    "maxFileSize": "70888",
+                    "maxFileSize": "70528",
                     "flagFailSafe": false,
                     "flagSecure": false,
                     "flagVendor": false,
