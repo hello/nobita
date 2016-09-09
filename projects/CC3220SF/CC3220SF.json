@@ -1,17 +1,17 @@
 {
     "header": {
-        "DEV_MAC_ADDR": "88:4a:ea:75:f7:53",
+        "DEV_MAC_ADDR": "f0:c7:7f:17:3a:23",
         "Description": "",
         "DeviceType": "CC3220FS",
-        "EnableReturnToFactory": "none",
+        "EnableReturnToFactory": "defaults_and_image",
         "IsTheDeviceSecure": true,
         "KeyFileLocation": "",
-        "Mode": "development",
+        "Mode": "production",
         "Name": "CC3220SF",
         "ProductionNWP": "1",
         "ReturnToFactoryGPIO": "1",
-        "ServicePackFileLocation": "SP_3.0.99.4.2.0.0.0.2.2.0.3.bin",
-        "StorageCapacityBytes": "2097152",
+        "ServicePackFileLocation": "SP_3.0.99.11.2.0.0.0.2.2.0.3.bin",
+        "StorageCapacityBytes": "4194304",
         "UseDefaultCertStore": false,
         "UseKey": false
     },
@@ -113,7 +113,7 @@
         "FILES": {
             "CSS_FILE_NAME": "certstore.151124p.sign",
             "CS_FILE_NAME": "certstore.151124p.lst",
-            "SP_FILE_NAME": "SP_3.0.99.4.2.0.0.0.2.2.0.3.bin",
+            "SP_FILE_NAME": "SP_3.0.99.11.2.0.0.0.2.2.0.3.bin",
             "SystemFileId": "FILES"
         }
     }

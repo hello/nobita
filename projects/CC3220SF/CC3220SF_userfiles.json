@@ -49,7 +49,7 @@
                     "flagSecure": false,
                     "flagStatic": false,
                     "flagVendor": false,
-                    "maxFileSize": "168232",
+                    "maxFileSize": "304800",
                     "name": "mcuimg1.bin",
                     "signatureFileName": "",
                     "signatureFileNameSelect": "0"
@@ -61,22 +61,43 @@
             "folders": [],
             "files": [
                 {
-                    "name": "mcuimg.bin",
-                    "maxFileSize": "22940",
+                    "certificationFileName": "ca.der",
+                    "fileToken": "",
                     "flagFailSafe": false,
+                    "flagNoSignatureTest": false,
+                    "flagPublicRead": false,
+                    "flagPublicWrite": false,
                     "flagSecure": true,
+                    "flagStatic": false,
+                    "flagVendor": false,
+                    "maxFileSize": "23940",
+                    "name": "mcuimg.bin",
+                    "signatureFileName": "ca-priv-key.der",
+                    "signatureFileNameSelect": "1"
+                }
+            ],
+            "name": "sys"
+        },
+        {
+            "folders": [],
+            "files": [
+                {
+                    "name": "factory.bin",
+                    "maxFileSize": "70528",
+                    "flagFailSafe": false,
+                    "flagSecure": false,
                     "flagVendor": false,
                     "flagStatic": false,
                     "flagNoSignatureTest": false,
                     "flagPublicWrite": false,
                     "flagPublicRead": false,
                     "fileToken": "",
-                    "certificationFileName": "ca.der",
-                    "signatureFileName": "ca-priv-key.der",
-                    "signatureFileNameSelect": "1"
+                    "certificationFileName": "",
+                    "signatureFileName": "",
+                    "signatureFileNameSelect": "0"
                 }
             ],
-            "name": "sys"
+            "name": "top"
         }
     ],
     "files": [
