@@ -1,0 +1,11 @@
+version: 5591
+last_tag: branch: HEAD
+travis_pull_request: false
+travis_branch: master
+travis_tag: 
+travis_build_id: 31647815
+travis_build_number: 5591
+travis_commit: 252323ef5e3246714c0d00748d78ccb199374b5a
+travis_commit_range: 86bbc716fc6a...252323ef5e32
+travis_job_id: 50872339
+travis_job_number: 5591.1
