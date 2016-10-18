@@ -1,12 +1,12 @@
-version: 5645
-last_tag: PVT-RC4
+version: 5942
+last_tag: 1p5_ext_rc2
 branch: HEAD
 travis_pull_request: false
-travis_branch: master
-travis_tag: 
-travis_build_id: 31961842
-travis_build_number: 5645
-travis_commit: d27511c6381b38eb32e7fd6d5b332e4092685a52
-travis_commit_range: 1e8dff0ec6ba...d27511c6381b
-travis_job_id: 51400689
-travis_job_number: 5645.1
+travis_branch: 1p5_ext_rc2
+travis_tag: 1p5_ext_rc2
+travis_build_id: 33339609
+travis_build_number: 5942
+travis_commit: 09adc74f3fb11557377ff145e05d48ce5b7b5eb7
+travis_commit_range: 
+travis_job_id: 53767675
+travis_job_number: 5942.1
