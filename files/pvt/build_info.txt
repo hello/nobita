@@ -1,12 +1,12 @@
-version: 5942
-last_tag: 1p5_ext_rc2
+version: 6149
+last_tag: 1p5_ext_rc7
 branch: HEAD
 travis_pull_request: false
-travis_branch: 1p5_ext_rc2
-travis_tag: 1p5_ext_rc2
-travis_build_id: 33339609
-travis_build_number: 5942
-travis_commit: 09adc74f3fb11557377ff145e05d48ce5b7b5eb7
+travis_branch: 1p5_ext_rc7
+travis_tag: 1p5_ext_rc7
+travis_build_id: 34313978
+travis_build_number: 6149
+travis_commit: fab199b305a8c270550969fd2b5bd1a19f62f881
 travis_commit_range: 
-travis_job_id: 53767675
-travis_job_number: 5942.1
+travis_job_id: 55436603
+travis_job_number: 6149.1
