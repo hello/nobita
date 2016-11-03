@@ -1,9 +1,6 @@
 <?xml version="1.0" ?>
 <Root>
   <ImageBuilderProp IsTheDeviceSecure="true" StorageCapacityBytes="4194304">
-    <DevelopmentImage>
-      <DevMacAddress>f0:c7:7f:17:3a:23</DevMacAddress>
-    </DevelopmentImage>
     <RetToFactoryFlagsList>
       <RetToFactoryFlag>RET_TO_IMAGE_HOST</RetToFactoryFlag>
       <RetToFactoryFlag>RET_TO_DEFAULT_HOST</RetToFactoryFlag>

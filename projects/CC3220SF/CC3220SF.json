@@ -6,7 +6,7 @@
         "EnableReturnToFactory": "defaults_and_image",
         "IsTheDeviceSecure": true,
         "KeyFileLocation": "",
-        "Mode": "development",
+        "Mode": "production",
         "Name": "CC3220SF",
         "ProductionNWP": "1",
         "ReturnToFactoryGPIO": "1",
