@@ -82,6 +82,14 @@
         </CommandWriteFile>
       </Command>
       <Command>
+        <CommandWriteFile>
+          <FileSystemName>/ota/mcuimg1.bin</FileSystemName>
+          <FileOpenFlagsList/>
+          <MaxFileSize>360984</MaxFileSize>
+          <FileLocation>./projects\CC3220SF\sl_fs\ota\mcuimg1.bin</FileLocation>
+        </CommandWriteFile>
+      </Command>
+      <Command>
         <CommandWriteFile CertificationFileName="ca.der" SignatureFileName="./projects\CC3220SF\sl_fs\sys\mcuflashimg.bin.sig">
           <FileSystemName>/sys/mcuflashimg.bin</FileSystemName>
           <FileOpenFlagsList>
@@ -93,17 +101,9 @@
       </Command>
       <Command>
         <CommandWriteFile>
-          <FileSystemName>/ota/mcuimg1.bin</FileSystemName>
-          <FileOpenFlagsList/>
-          <MaxFileSize>360984</MaxFileSize>
-          <FileLocation>./projects\CC3220SF\sl_fs\ota\mcuimg1.bin</FileLocation>
-        </CommandWriteFile>
-      </Command>
-      <Command>
-        <CommandWriteFile>
           <FileSystemName>/top/factory.bin</FileSystemName>
           <FileOpenFlagsList/>
-          <MaxFileSize>70560</MaxFileSize>
+          <MaxFileSize>71124</MaxFileSize>
           <FileLocation>./projects\CC3220SF\sl_fs\top\factory.bin</FileLocation>
         </CommandWriteFile>
       </Command>

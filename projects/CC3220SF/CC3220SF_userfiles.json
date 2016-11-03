@@ -40,27 +40,6 @@
             "folders": [],
             "files": [
                 {
-                    "certificationFileName": "ca.der",
-                    "fileToken": "",
-                    "flagFailSafe": false,
-                    "flagNoSignatureTest": false,
-                    "flagPublicRead": false,
-                    "flagPublicWrite": false,
-                    "flagSecure": true,
-                    "flagStatic": false,
-                    "flagVendor": false,
-                    "maxFileSize": "23940",
-                    "name": "mcuimg.bin",
-                    "signatureFileName": "ca-priv-key.der",
-                    "signatureFileNameSelect": "1"
-                }
-            ],
-            "name": "sys"
-        },
-        {
-            "folders": [],
-            "files": [
-                {
                     "name": "mcuimg1.bin",
                     "maxFileSize": "360984",
                     "flagFailSafe": false,
@@ -82,8 +61,29 @@
             "folders": [],
             "files": [
                 {
+                    "certificationFileName": "ca.der",
+                    "fileToken": "",
+                    "flagFailSafe": false,
+                    "flagNoSignatureTest": false,
+                    "flagPublicRead": false,
+                    "flagPublicWrite": false,
+                    "flagSecure": true,
+                    "flagStatic": false,
+                    "flagVendor": false,
+                    "maxFileSize": "23940",
+                    "name": "mcuimg.bin",
+                    "signatureFileName": "ca-priv-key.der",
+                    "signatureFileNameSelect": "1"
+                }
+            ],
+            "name": "sys"
+        },
+        {
+            "folders": [],
+            "files": [
+                {
                     "name": "factory.bin",
-                    "maxFileSize": "70560",
+                    "maxFileSize": "71124",
                     "flagFailSafe": false,
                     "flagSecure": false,
                     "flagVendor": false,
