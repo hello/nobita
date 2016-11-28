@@ -103,7 +103,7 @@
         <CommandWriteFile>
           <FileSystemName>/top/factory.bin</FileSystemName>
           <FileOpenFlagsList/>
-          <MaxFileSize>71124</MaxFileSize>
+          <MaxFileSize>69308</MaxFileSize>
           <FileLocation>./projects\CC3220SF\sl_fs\top\factory.bin</FileLocation>
         </CommandWriteFile>
       </Command>
